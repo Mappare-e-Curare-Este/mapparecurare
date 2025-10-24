@@ -32,13 +32,37 @@ function openTreeOverlay(feature) {
   treeDetails.appendChild(imageContainer);
   document.getElementById('treeOverlay').classList.add('visible');
   // 🌳 Il metodo 'history.pushState' ora farà riferimento all'oggetto globale 'window.history'.
-  window.history.pushState(null, '', location.pathname + '#overlay'); 
+  window.history.replaceState(null, '', location.pathname + '#overlay'); 
 }
 
 // Funzione per chiudere l'overlay
 function closeOverlay() {
   document.getElementById('treeOverlay').classList.remove('visible');
   unhighlightLayers();
+}
+
+function openInfoOverlay() {
+  // Pulisce l'hash esistente o usa replaceState per non aggiungere #info al di sopra di #overlay
+  if (location.hash.includes('#overlay') || location.hash.includes('#info') || location.hash.includes('#menu-open') || location.hash.includes('#popup')) {
+      window.history.replaceState(null, '', location.pathname + '#info');
+  } else {
+      // Usa pushState se non c'è già un overlay aperto per consentire il tasto Indietro
+      window.history.pushState(null, '', location.pathname + '#info');
+  }
+  
+  // Chiudi qualsiasi altra interfaccia aperta
+  closeMenu();
+  document.getElementById('treeOverlay').classList.remove('visible');
+  map.closePopup();
+  unhighlightLayers(); 
+  
+  document.getElementById('infoOverlay').classList.add('visible');
+  document.getElementById('infoContent').scrollTop = 0;
+}
+
+// Funzione per chiudere l'overlay Info
+function closeInfoOverlay() {
+  document.getElementById('infoOverlay').classList.remove('visible');
 }
 
 // 🌳 Funzione per chiudere il menu
@@ -49,7 +73,7 @@ function closeMenu() {
 
 // 🌳 Funzione per aprire il menu
 function openMenu() {
-
+  closeInfoOverlay();
   document.getElementById('treeOverlay').classList.remove('visible');
   map.closePopup();
   unhighlightLayers();
@@ -84,6 +108,11 @@ function unhighlightLayers() {
 }
 
 let map;
+
+let watchId = null;
+let gpsMarker = null;
+let accuracyCircle = null;
+let isInitialCenter = false;
 
 // Caricamento dinamico dei POIs da pois.json
 window.onload = function() {
@@ -177,7 +206,15 @@ function initMap(geojsonPois) {
   const treeListMenu = document.getElementById('treeListMenu');
   const treeList = document.getElementById('treeList');
   const treeOverlay = document.getElementById('treeOverlay');
+  const infoButton = document.getElementById('infoButton');
+  const infoOverlay = document.getElementById('infoOverlay');
 
+  infoButton.onclick = openInfoOverlay;
+
+  infoOverlay.addEventListener('click', e => {
+    if (e.target === infoOverlay) closeInfoOverlay();
+  });
+  
   menuButton.onclick = () => {
     if (treeListMenu.style.transform === 'translateX(0px)') {
       closeMenu();
@@ -261,7 +298,7 @@ function initMap(geojsonPois) {
             // per comodità, dato che non c'è scelta da fare.
             if (featuresOfSpecies.length === 1 && featureMatch.id === firstFeature.id) {
                  layer.openPopup();
-                 history.pushState(null, '', location.pathname + '#popup'); // Rimuovere/Modificare
+                 history.replaceState(null, '', location.pathname + '#popup'); // Rimuovere/Modificare
                 
                  setTimeout(() => {
                     const openButton = document.querySelector(`.open-details-button[data-feature-id="${firstFeature.id}"]`);
@@ -310,7 +347,8 @@ function initMap(geojsonPois) {
     });
     
 treeCircle.on('click', function() {
-        closemenu();
+        closeMenu();
+        closeInfoOverlay();
         unhighlightLayers(); // <-- Rimuovi evidenziazione precedente
 
         // Evidenzia solo il marker cliccato
@@ -322,7 +360,7 @@ treeCircle.on('click', function() {
         highlightedLayers.push(this); // Aggiungi questo marker alla lista degli evidenziati
         
         this.openPopup();
-        history.pushState(null, '', location.pathname + '#popup');
+        history.replaceState(null, '', location.pathname + '#popup');
 
         setTimeout(() => {
             const openButton = document.querySelector(`.open-details-button[data-feature-id="${feature.id}"]`);
@@ -343,6 +381,15 @@ treeCircle.on('click', function() {
   map.addLayer(markers);
   updateCircleSizes();
 
+  // AGGIUNTA PER LA COERENZA DELLA CRONOLOGIA DEL POPUP
+  map.on('popupclose', function(e) {
+    // Rimuove #popup dall'URL quando Leaflet chiude il popup
+    if (location.hash.includes('#popup')) {
+      window.history.replaceState(null, '', location.pathname);
+    }
+    // NOTA: unhighlightLayers() non è necessario qui, perché viene gestito dal click successivo
+    // (es. apertura scheda) o dalla chiusura generale con onpopstate.
+  });
 // --- Funzioni e Gestori di Eventi per la Geolocalizzazione GPS ---
   
   // 2. Gestisce il successo della localizzazione
@@ -386,7 +433,8 @@ treeCircle.on('click', function() {
 
 // --- Gestione della Cronologia (Tasto 'Indietro') CORRETTA e COMPLETA ---
 window.onpopstate = () => {
-    const isOverlayVisible = document.getElementById('treeOverlay').classList.contains('visible');
+    const isTreeOverlayVisible = document.getElementById('treeOverlay').classList.contains('visible');
+    const isInfoOverlayVisible = document.getElementById('infoOverlay') ? document.getElementById('infoOverlay').classList.contains('visible') : false; // <-- AGGIUNTO IL CONTROLLO
     const isMenuOpen = document.getElementById('treeListMenu').style.transform === 'translateX(0px)';
     const isPopupOpen = map.getContainer().querySelector('.leaflet-popup-pane');
     
@@ -395,21 +443,32 @@ window.onpopstate = () => {
         closeMenu();
     }
     
-    // 1. GESTIONE OVERLAY: Controlla se l'overlay DEVE essere chiuso
-    if (isOverlayVisible && !location.hash.includes('#overlay')) {
+    // 1. GESTIONE OVERLAY ALBERO: Controlla se l'overlay DEVE essere chiuso
+    if (isTreeOverlayVisible && !location.hash.includes('#overlay')) {
         // Chiude l'overlay se la classe è attiva ma l'hash è sparito
         document.getElementById('treeOverlay').classList.remove('visible');
     }
     
-    // 2. GESTIONE POPUP: Controlla se un popup DEVE essere chiuso
+    // 2. GESTIONE OVERLAY INFO: Controlla se l'overlay DEVE essere chiuso <-- AGGIUNTO
+    if (isInfoOverlayVisible && !location.hash.includes('#info')) {
+        document.getElementById('infoOverlay').classList.remove('visible');
+    }
+    
+    // 3. GESTIONE POPUP: Controlla se un popup DEVE essere chiuso
     if (isPopupOpen && !location.hash.includes('#popup')) {
         map.closePopup();
     }
     
-    // 3. GESTIONE PULIZIA: Rimuove l'evidenziazione e l'hash URL se non c'è più nulla aperto
-    if (!isOverlayVisible && !isPopupOpen && !isMenuOpen) {
-         unhighlightLayers();
-         // ✅ AGGIUNTA: Pulisci l'hash URL se la pagina è "pulita"
+    // 4. GESTIONE PULIZIA: Rimuove l'evidenziazione e l'hash URL se non c'è più nulla aperto
+    // Chiude il popup? Pulisci l'evidenziazione.
+    if (!isPopupOpen && location.hash.includes('#popup')) {
+        unhighlightLayers();
+    }
+
+    // Se la pagina è completamente pulita, assicurati che l'URL sia pulito.
+    if (!isTreeOverlayVisible && !isInfoOverlayVisible && !isPopupOpen && !isMenuOpen) {
+         unhighlightLayers(); // Pulizia finale
+         // Pulisci l'hash URL se la pagina è "pulita"
          window.history.replaceState(null, '', location.pathname);
     }
 };
@@ -417,34 +476,148 @@ window.onpopstate = () => {
 
 const gpsButton = document.getElementById('gpsButton');
 
-// Gestore click per avviare la localizzazione
-if (gpsButton) {
-    gpsButton.onclick = () => {
-        // Opzioni di localizzazione
-        const locationOptions = {
-            enableHighAccuracy: true,
-            timeout: 10000,
-            maximumAge: 0,
-            setView: true, // Centra la mappa sulla posizione
-            maxZoom: 17
-        };
-        
-        // Avvia la localizzazione. Leaflet usa i gestori onLocationFound/Error definiti in initMap.
-        map.locate(locationOptions); 
-        
-        // Disabilita il pulsante per evitare click multipli mentre cerca
-        gpsButton.disabled = true;
-        gpsButton.textContent = '...GPS...';
-        
-        // Riabilita il pulsante dopo 10 secondi (il timeout) o al successo/errore
-        const resetGpsButton = () => {
-             gpsButton.disabled = false;
-             gpsButton.textContent = '⚲';
-        };
-        setTimeout(resetGpsButton, locationOptions.timeout);
-        map.once('locationfound', resetGpsButton);
-        map.once('locationerror', resetGpsButton);
-    }
+const locationOptions = {
+    enableHighAccuracy: true,
+    timeout: 15000, // Aumenta il timeout per il watch
+    maximumAge: 0,
+};
 
+// Funzione per ricentrare la mappa sul marker GPS esistente
+function reCenterMap() {
+    if (gpsMarker) {
+        // Chiudi le interfacce aperte per focalizzarti sulla mappa
+        closeMenu();
+        closeOverlay();
+        closeInfoOverlay();
+        map.closePopup();
+
+        // Ricentra la mappa sul marker GPS esistente
+        map.flyTo(gpsMarker.getLatLng(), map.getZoom() > 18 ? map.getZoom() : 18, {
+             duration: 1.5 // Animazione FlyTo
+        });
+        
+        // Breve feedback visivo sul pulsante
+        gpsButton.textContent = '◉ Centrato';
+        setTimeout(() => {
+            if (watchId !== null) {
+                 gpsButton.textContent = '◉ GPS Attivo';
+            }
+        }, 800);
+        
+    } else if (watchId !== null) {
+        alert('Attendi il primo fix di posizione.');
+    }
 }
 
+function startTracking() {
+    closeMenu();
+    closeOverlay();
+    closeInfoOverlay();
+    unhighlightLayers();
+    
+    // 🌳 NUOVA LOGICA: Imposta il flag per centrare al primo fix di onLocationSuccess
+    isInitialCenter = true; 
+    
+    // USA watchPosition PER IL TRACCIAMENTO CONTINUO
+    watchId = navigator.geolocation.watchPosition(onLocationSuccess, onLocationError, locationOptions);
+    
+    // Cambia il testo e disabilita durante l'attesa del primo fix
+    gpsButton.disabled = true;
+    gpsButton.textContent = 'GPS...';
+}
+
+function stopTracking() {
+    if (watchId !== null) {
+        navigator.geolocation.clearWatch(watchId);
+        watchId = null;
+    }
+
+    isInitialCenter = false; // <-- RESETTA IL FLAG
+
+    // Rimuovi i layer dalla mappa
+    if (gpsMarker) {
+        map.removeLayer(gpsMarker);
+        gpsMarker = null;
+    }
+    if (accuracyCircle) {
+        map.removeLayer(accuracyCircle);
+        accuracyCircle = null;
+    }
+    
+    // Resetta lo stato del pulsante
+    gpsButton.disabled = false;
+    gpsButton.textContent = '⚲';
+    gpsButton.style.backgroundColor = '#007800cc'; // Torna al colore originale
+}
+
+// Gestore click per avviare/ricentrare/interrompere la localizzazione
+if (gpsButton) {
+    gpsButton.onclick = () => {
+        if (watchId === null) {
+            startTracking(); // Avvia il tracciamento
+        } else {
+            // Se il tracciamento è già attivo, ricentra la mappa
+            reCenterMap(); 
+        }
+        
+        // *OPZIONALE: Se vuoi tornare al vecchio comportamento Start/Stop, 
+        // sostituisci il blocco 'else' qui sopra con 'stopTracking();'
+    }
+}
+
+// 2. Gestisce il successo della localizzazione (AGGIORNATA PER TRACCIAMENTO E CENTRAGGIO)
+  function onLocationSuccess(e) {
+    const latlng = e.latlng;
+    const radius = e.accuracy / 2;
+    
+    // Rimuovi i layer precedenti se esistono
+    if (gpsMarker) {
+        map.removeLayer(gpsMarker);
+    }
+    if (accuracyCircle) {
+        map.removeLayer(accuracyCircle);
+    }
+
+    // Cerchio di accuratezza
+    accuracyCircle = L.circle(latlng, radius, {
+        color: '#1a73e8', // Blu
+        fillColor: '#1a73e8',
+        fillOpacity: 0.15,
+        weight: 1,
+        isGpsMarker: true 
+    }).addTo(map);
+
+    // Marker della posizione corrente
+    gpsMarker = L.circleMarker(latlng, {
+        radius: 8,
+        color: '#fff',
+        weight: 3,
+        fillColor: '#1a73e8',
+        fillOpacity: 1,
+        isGpsMarker: true 
+    }).addTo(map)
+      .bindPopup("Sei qui, precisione: " + radius.toFixed(0) + " metri.");
+    
+    // 🌳 NUOVA LOGICA: FlyTo solo al primo fix
+    if (isInitialCenter) {
+        // Usa fitBounds sull'accuratezza per una migliore visualizzazione iniziale
+        const bounds = accuracyCircle.getBounds();
+        map.fitBounds(bounds, { maxZoom: 18, padding: [50, 50] });
+        
+        // Resetta il flag dopo il primo centraggio
+        isInitialCenter = false;
+        
+        // Aggiorna subito il pulsante dopo il primo fix (feedback visivo)
+        gpsButton.disabled = false;
+        gpsButton.textContent = '◉ GPS Attivo';
+        gpsButton.style.backgroundColor = '#00aaff';
+    }
+  }
+
+  // 3. Gestisce l'errore di localizzazione (AGGIORNATA)
+  function onLocationError(e) {
+    console.error("Errore di geolocalizzazione:", e.message);
+    // Interrompi il tracciamento in caso di errore
+    stopTracking(); 
+    alert("Impossibile trovare la tua posizione. Assicurati che il GPS sia attivo e di aver concesso i permessi.");
+  }
