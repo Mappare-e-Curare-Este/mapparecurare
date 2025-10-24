@@ -438,10 +438,11 @@ if (gpsButton) {
         // Riabilita il pulsante dopo 10 secondi (il timeout) o al successo/errore
         const resetGpsButton = () => {
              gpsButton.disabled = false;
-             gpsButton.textContent = '📍';
+             gpsButton.textContent = '⚲';
         };
         setTimeout(resetGpsButton, locationOptions.timeout);
         map.once('locationfound', resetGpsButton);
         map.once('locationerror', resetGpsButton);
     }
+
 }
