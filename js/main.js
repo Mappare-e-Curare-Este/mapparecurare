@@ -84,8 +84,8 @@
     treeDetails.appendChild(imageContainer);
     document.getElementById('treeOverlay').classList.add('visible');
     
-    // 🌳 CORREZIONE: Usa pushState per creare un punto nella cronologia che può essere annullato
-    if (location.hash.includes('#overlay')) {
+    // 🌳 MODIFICA: Assicurati che l'hash sia #overlay e sostituisci lo stato esistente (#popup)
+    if (location.hash.length > 0) {
         window.history.replaceState(null, '', location.pathname + '#overlay'); 
     } else {
         window.history.pushState(null, '', location.pathname + '#overlay');
@@ -105,11 +105,10 @@
     if (map) map.closePopup();
     unhighlightLayers(); 
     
-    // 🌳 CORREZIONE: Usa pushState se l'hash è pulito per non uscire subito
+    // 🌳 CORREZIONE: Usa replaceState se c'è un hash, altrimenti pushState
     if (location.hash.length === 0 || location.hash === '#exit') {
         window.history.pushState(null, '', location.pathname + '#info');
     } else {
-        // Se c'è già un hash (menu, popup, overlay), sostituiscilo con #info
         window.history.replaceState(null, '', location.pathname + '#info');
     }
     
@@ -138,18 +137,19 @@
     const treeListMenu = document.getElementById('treeListMenu');
     treeListMenu.style.transform = 'translateX(0)';
     
-    // Aggiunto: Quando il menu è aperto, aggiungi uno stato alla cronologia del browser.
+    // 🌳 MODIFICA: Quando il menu è aperto, aggiungi uno stato alla cronologia del browser.
     if (!location.hash.includes('#menu-open')) {
         window.history.pushState({ menuOpen: true }, '', '#menu-open');
     } else {
+        // Se si riapre il menu senza uno stato intermedio, usa replaceState
         window.history.replaceState({ menuOpen: true }, '', '#menu-open');
     }
-
-    // Funzione per mostrare il prompt d'uscita
+  }
+  
+  // Funzione per mostrare il prompt d'uscita
   function showExitPrompt() {
     document.getElementById('exitPrompt').classList.add('visible');
-    // Avvia un timer per chiudere il prompt se l'utente non fa nulla
-    exitPromptTimer = setTimeout(closeExitPrompt, 3000); 
+    exitPromptTimer = null;
   }
 
   // Funzione per chiudere il prompt d'uscita
@@ -159,7 +159,6 @@
       clearTimeout(exitPromptTimer);
       exitPromptTimer = null;
     }
-  }
   }
 
   // =========================================================================
@@ -323,12 +322,14 @@
         highlightedLayers.push(this); 
         
         this.openPopup();
-        window.history.replaceState(null, '', location.pathname + '#popup');
+        // 🌳 CORREZIONE: Aggiungi un nuovo stato per permettere la chiusura con 'Indietro'
+        window.history.pushState(null, '', location.pathname + '#popup');
 
         setTimeout(() => {
             // Usa l'ID del feature per trovare il pulsante corretto nel popup
             const openButton = document.querySelector(`.open-details-button[data-feature-id="${feature.id}"]`);
             if (openButton) {
+                // 🌳 CORREZIONE: Questa funzione è corretta: chiude popup, pulisce highlight e apre overlay (#overlay)
                 openButton.onclick = () => {
                     this.closePopup();
                     unhighlightLayers(); 
@@ -347,8 +348,9 @@
     
     // Logica di chiusura del popup
     map.on('popupclose', function() {
+      // 🌳 MODIFICA: Invece di usare back(), rimuovi l'hash manualmente per non uscire se l'hash precedente è vuoto.
       if (location.hash.includes('#popup')) {
-        window.history.replaceState(null, '', location.pathname);
+        window.history.replaceState(null, '', location.pathname); // Rimuove solo #popup
       }
       unhighlightLayers(); // Pulizia dell'evidenziazione
     });
@@ -379,6 +381,7 @@
             // Se c'è un solo albero, apri il popup automaticamente per comodità
             if (featuresOfSpecies.length === 1 && layer.options.featureId === firstFeature.id) {
                  layer.openPopup();
+                 window.history.pushState(null, '', location.pathname + '#popup'); // Aggiunto hash per popup automatico
                 
                  setTimeout(() => {
                     const openButton = document.querySelector(`.open-details-button[data-feature-id="${firstFeature.id}"]`);
@@ -520,6 +523,10 @@
       menuButton.addEventListener('click', () => {
           if (treeListMenu.style.transform === 'translateX(0px)') {
               closeMenu();
+              // 🌳 MODIFICA: Rimuovi l'hash manualmente, non usare back() per non uscire
+              if (location.hash.includes('#menu-open')) {
+                   window.history.replaceState(null, '', location.pathname);
+              }
           } else {
               openMenu();
           }
@@ -527,24 +534,39 @@
       
       // Listener Info Overlay
       infoButton.addEventListener('click', openInfoOverlay);
-      document.querySelector('#infoOverlay .close-button').addEventListener('click', closeInfoOverlay);
+      document.querySelector('#infoOverlay .close-button').addEventListener('click', () => {
+          closeInfoOverlay();
+          // 🌳 MODIFICA: Rimuovi l'hash manualmente, non usare back() per non uscire
+          if (location.hash.includes('#info')) window.history.replaceState(null, '', location.pathname);
+      });
       infoOverlay.addEventListener('click', e => {
-        if (e.target === infoOverlay) closeInfoOverlay();
+        if (e.target === infoOverlay) {
+            closeInfoOverlay();
+            // 🌳 MODIFICA: Rimuovi l'hash manualmente, non usare back() per non uscire
+            if (location.hash.includes('#info')) window.history.replaceState(null, '', location.pathname);
+        }
       });
 
       // Listener Tree Overlay
-      document.querySelector('#treeOverlay .close-button').addEventListener('click', closeOverlay);
+      document.querySelector('#treeOverlay .close-button').addEventListener('click', () => {
+          closeOverlay();
+          // 🌳 MODIFICA: Rimuovi l'hash manualmente, non usare back() per non uscire
+          if (location.hash.includes('#overlay')) window.history.replaceState(null, '', location.pathname);
+      });
       treeOverlay.addEventListener('click', e => {
-        if (e.target === treeOverlay) closeOverlay();
+        if (e.target === treeOverlay) {
+            closeOverlay();
+            // 🌳 MODIFICA: Rimuovi l'hash manualmente, non usare back() per non uscire
+            if (location.hash.includes('#overlay')) window.history.replaceState(null, '', location.pathname);
+        }
       });
 
       // Listener per l'Overlay di Uscita
       const exitPrompt = document.getElementById('exitPrompt');
       exitPrompt.addEventListener('click', e => {
-          if (e.target.id === 'exitPrompt' || e.target.classList.contains('overlay-content') === false) {
+          // Controlla se il click è sullo sfondo (non sul contenuto)
+          if (e.target.id === 'exitPrompt' || !e.target.closest('.overlay-content')) {
               closeExitPrompt();
-              // Quando l'utente annulla, dobbiamo rimuovere lo stato fittizio dall'history.
-              window.history.replaceState(null, '', location.pathname); 
           }
       });
       
@@ -560,7 +582,15 @@
       }
       
       // Listener per chiudere il menu cliccando sulla mappa
-      map.on('click', closeMenu);
+      map.on('click', () => {
+          if (treeListMenu.style.transform === 'translateX(0px)') {
+              closeMenu();
+              // 🌳 MODIFICA: Rimuovi l'hash manualmente, non usare back() per non uscire
+              if (location.hash.includes('#menu-open')) {
+                   window.history.replaceState(null, '', location.pathname);
+              }
+          }
+      });
 
       // Collega i gestori di eventi per la localizzazione (i vecchi erano in initMap)
       map.on('locationfound', onLocationSuccess);
@@ -580,68 +610,61 @@
 
 // --- Gestione della Cronologia (Tasto 'Indietro') CORRETTA e COMPLETA ---
   window.onpopstate = () => {
-      // Variabili di stato aggiornate
+      // Variabili di stato aggiornate (ri-calcolate per onpopstate)
       const isTreeOverlayVisible = document.getElementById('treeOverlay').classList.contains('visible');
-      const isInfoOverlayVisible = document.getElementById('infoOverlay') ? document.getElementById('infoOverlay').classList.contains('visible') : false;
+      const isInfoOverlayVisible = document.getElementById('infoOverlay').classList.contains('visible');
       const isMenuOpen = document.getElementById('treeListMenu').style.transform === 'translateX(0px)';
       const isExitPromptVisible = document.getElementById('exitPrompt').classList.contains('visible');
+      
+      // Controlla se il popup è aperto
+      const isPopupOpen = map && map.getContainer().querySelector('.leaflet-popup-pane .leaflet-popup');
 
-      // Se l'hash attuale è '#exit', significa che l'utente ha premuto Indietro quando il prompt era già visibile.
-      // In questo caso, lasciamo che il browser esca.
-      if (location.hash === '#exit' && isExitPromptVisible) {
+      // 1. GESTIONE CHIUSURA/APERTURA DEGLI STATI
+      
+      // Chiusura del Prompt di Uscita se l'utente ha annullato o se lo stato è cambiato
+      if (isExitPromptVisible && location.hash !== '#exit') {
+          closeExitPrompt(); 
           return; 
       }
       
-      // 1. GESTIONE CHIUSURA ELEMENTI (Menu, Overlay, Popup)
-      // Se l'hash non corrisponde più a un elemento aperto, chiudilo.
-
+      // Chiusura degli elementi: l'hash non corrisponde più allo stato aperto.
       if (isMenuOpen && location.hash !== '#menu-open') {
           closeMenu();
+          return; // Chiudi solo un elemento per volta
       }
       if (isTreeOverlayVisible && location.hash !== '#overlay') {
           closeOverlay();
+          return; 
       }
       if (isInfoOverlayVisible && location.hash !== '#info') {
           closeInfoOverlay();
+          return;
       }
-      if (map && map.getContainer().querySelector('.leaflet-popup-pane') && location.hash !== '#popup') {
+      if (isPopupOpen && location.hash !== '#popup') {
           map.closePopup();
-          unhighlightLayers(); 
+          unhighlightLayers();
+          return;
       }
       
-      // 2. GESTIONE USCITA (Quando tutti gli elementi sono chiusi)
-      // Se l'utente preme "Indietro" quando non ci sono elementi aperti E non c'è più lo stato #exit nell'hash,
-      // significa che siamo tornati allo stato iniziale pulito (es. location.pathname).
+      // 2. GESTIONE USCITA DALLO STATO PULITO
       
-      const isCleanState = !isTreeOverlayVisible && !isInfoOverlayVisible && !isMenuOpen && !location.hash.includes('#popup');
-      
-      if (isCleanState) {
-          
-          if (isExitPromptVisible) {
-             // Caso B: L'utente ha premuto 'Indietro' e il prompt era visibile, 
-             // ma l'hash è stato rimosso (ad esempio, è rimasto solo location.pathname).
-             // Non facciamo nulla, lasciamo che il browser prosegua l'uscita (la chiusura del prompt è gestita dalla logica pushState/replaceState successiva).
-             return;
-          } else {
-             // Caso A: Siamo in uno stato pulito (tutto chiuso) e l'utente preme "Indietro".
-             // Mostra il prompt e aggiungi lo stato fittizio.
-             showExitPrompt();
-             window.history.pushState({ exit: true }, '', location.pathname + '#exit');
-             return; 
-          }
-      }
+      const isCleanState = !isTreeOverlayVisible && !isInfoOverlayVisible && !isMenuOpen && !isPopupOpen;
 
-      // 3. PULIZIA FINALE
-      // Se un elemento è stato appena chiuso (es. da #info a #), pulisci l'URL.
-      const isAnythingOpen = isTreeOverlayVisible || isInfoOverlayVisible || isMenuOpen || location.hash.includes('#popup');
-      
-      if (!isAnythingOpen && location.hash.length > 0) {
-          window.history.replaceState(null, '', location.pathname);
+      if (isCleanState && !isExitPromptVisible) {
+          // Siamo in uno stato pulito.
+          if (location.hash.length === 0) {
+              // Stato pulito senza hash -> Mostra il prompt e aggiungi lo stato fittizio '#exit'.
+              showExitPrompt();
+              window.history.pushState({ exit: true }, '', location.pathname + '#exit'); 
+          } 
+          // Se l'hash è '#exit', non facciamo nulla, la successiva pressione di "Indietro" chiuderà l'app (comportamento nativo del browser).
+          return; 
       }
       
-      // Se l'hash è `#exit` ma il prompt è nascosto (ad esempio, l'utente ha cliccato fuori), pulisci l'hash.
-      if (location.hash === '#exit' && !isExitPromptVisible) {
-          window.history.replaceState(null, '', location.pathname);
+      // 3. PULIZIA FINALE (Necessaria se la chiusura di un elemento ci ha lasciato con un hash indesiderato)
+      // Se l'elemento non è più visibile ma l'hash è ancora lì, torniamo indietro.
+      if (location.hash.length > 0 && isCleanState && !isExitPromptVisible) {
+           window.history.replaceState(null, '', location.pathname);
       }
   };
 })();
