@@ -28,7 +28,7 @@
 
   <div id="treeOverlay">
     <div id="treeContent">
-      <button class="close-button" onclick="closeOverlay()">&times;</button>
+      <button class="close-button">&times;</button>
       <div id="treeDetails"></div>
     </div>
   </div>
@@ -37,7 +37,7 @@
 
 <div id="infoOverlay">
     <div id="infoContent">
-      <button class="close-button" onclick="closeInfoOverlay()">&times;</button>
+      <button class="close-button">&times;</button>
         <h2>Progetto Mappare e Curare</h2>
         <p>Questa mappa interattiva mostra la posizione e i dettagli degli alberi (POIs) in un'area specifica.</p>
         <p>Utilizza il menu laterale (☰) per filtrare per specie o il pulsante GPS (⚲) per localizzarti.</p>
@@ -45,6 +45,13 @@
         <p>Progetto realizzato da: </p>
       </div>
     </div>
+
+<div id="exitPrompt" class="overlay">
+    <div class="overlay-content">
+        <h2>Sei sicuro di voler uscire?</h2>
+        <p>Premi il tasto "Indietro" di nuovo per chiudere l'applicazione o tocca la mappa per annullare.</p>
+    </div>
+</div>
 
   <!-- Leaflet & MarkerCluster JS -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
