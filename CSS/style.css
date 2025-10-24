@@ -38,7 +38,7 @@ html, body {
 /* --- Stili per il pulsante GPS --- */
 #gpsButton {
   position: absolute;
-  bottom: 70px;
+  bottom: 50px;
   left: 20px;
   z-index: 10000;
   background-color: #007800cc;
@@ -216,3 +216,4 @@ html, body {
 .open-details-button:hover {
   background-color: #255c19;
 }
+
