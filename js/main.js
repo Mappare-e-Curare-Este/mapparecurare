@@ -310,6 +310,7 @@ function initMap(geojsonPois) {
     });
     
 treeCircle.on('click', function() {
+        closemenu();
         unhighlightLayers(); // <-- Rimuovi evidenziazione precedente
 
         // Evidenzia solo il marker cliccato
@@ -446,3 +447,4 @@ if (gpsButton) {
     }
 
 }
+
