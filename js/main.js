@@ -8,10 +8,8 @@
   let markers; // MarkerClusterGroup
   
   // Variabili GPS
-  let watchId = null;
   let gpsMarker = null;
   let accuracyCircle = null;
-  let isInitialCenter = false; // Flag per il primo centraggio
   
   // Variabili Interfaccia
   let highlightedLayers = [];
@@ -403,133 +401,125 @@
   // IV. FUNZIONI DI GEOLOCALIZZAZIONE (GPS)
   // =========================================================================
 
-  function onLocationSuccess(e) {
-    const latlng = L.latLng(position.coords.latitude, position.coords.longitude);
-    const radius = position.coords.accuracy;
-    
-// Rimuovi i layer precedenti se esistono
-    if (gpsMarker) {
-        map.removeLayer(gpsMarker);
-    }
-    if (accuracyCircle) {
-        map.removeLayer(accuracyCircle);
-    }
-
-    // Cerchio di accuratezza
-    accuracyCircle = L.circle(latlng, radius, {
-        color: '#1a73e8', // Blu
-        fillColor: '#1a73e8',
-        fillOpacity: 0.15,
-        weight: 1,
-        isGpsMarker: true 
-    }).addTo(map);
-
-    // Marker della posizione corrente
-    gpsMarker = L.circleMarker(latlng, {
-        radius: 8,
-        color: '#fff',
-        weight: 3,
-        fillColor: '#1a73e8',
-        fillOpacity: 1,
-        isGpsMarker: true 
-    }).addTo(map)
-      .bindPopup("Sei qui, precisione: " + radius.toFixed(0) + " metri.");
-    
-    // FlyTo solo al primo fix
-    if (isInitialCenter) {
-        const bounds = accuracyCircle.getBounds();
-        // Usa una logica più robusta per evitare zoom eccessivi
-        let targetZoom = map.getZoom() > 18 ? map.getZoom() : 18;
-        if (radius < 50) targetZoom = 19; // Zoom più ravvicinato per alta precisione
-        if (radius > 100) targetZoom = 17; // Zoom più lontano per bassa precisione
-
-        map.flyTo(latlng, targetZoom, {
-             duration: 1.5
-        });
-        isInitialCenter = false;
-        
-        document.getElementById('gpsButton').disabled = false;
-        document.getElementById('gpsButton').textContent = '◉ GPS Attivo';
-        document.getElementById('gpsButton').style.backgroundColor = '#00aaff';
-    }
-}
-
-// Modificata per accettare l'oggetto 'error' del browser
-function onLocationError(error) {
-    // Prima cosa: ferma il tentativo di tracciamento per evitare loop o chiamate inutili
-    stopTracking(); 
-
-    // Riferimento al pulsante
-    const gpsButton = document.getElementById('gpsButton');
-
-    // ⭐ ESSENZIALE: Resetta lo stato del pulsante in caso di errore
-    gpsButton.disabled = false; // Riattiva il pulsante per permettere un nuovo tentativo
-    gpsButton.textContent = '⚲ GPS Spento';
-    gpsButton.style.backgroundColor = '#006400cc'; // Colore base del pulsante spento
-
-    console.error("Errore di geolocalizzazione:", error.message);
-        
-    const msg = (error.code === 1) ? 
-        "Accesso alla posizione negato. Concedi i permessi." : 
-        "Impossibile trovare la tua posizione (Timeout). Assicurati che il GPS sia attivo.";
-        
-    alert(msg);
-}
-  
-  function reCenterMap() {
-      if (gpsMarker) {
-          closeAllUIs();
-          map.flyTo(gpsMarker.getLatLng(), map.getZoom() > 18 ? map.getZoom() : 18, {
-               duration: 1.5
-          });
-          
-          const gpsButton = document.getElementById('gpsButton');
-          gpsButton.textContent = '◉ Centrato';
-          setTimeout(() => {
-              if (watchId !== null) {
-                   gpsButton.textContent = '◉ GPS Attivo';
-              }
-          }, 800);
-          
-      } else if (watchId !== null) {
-          alert('Attendi il primo fix di posizione.');
-      }
-  }
-
-  function startTracking() {
-      closeAllUIs();
-      isInitialCenter = true; 
-      
-      watchId = navigator.geolocation.watchPosition(onLocationSuccess, onLocationError, LOCATION_OPTIONS);
-      
+ // Funzione chiamata in caso di successo della localizzazione
+    function onLocationSuccess(position) {
+      const latlng = L.latLng(position.coords.latitude, position.coords.longitude);
+      const radius = position.coords.accuracy;
       const gpsButton = document.getElementById('gpsButton');
-      gpsButton.disabled = true;
-      gpsButton.textContent = 'GPS...';
-  }
 
-  function stopTracking() {
-      if (watchId !== null) {
-          navigator.geolocation.clearWatch(watchId);
-          watchId = null;
-      }
-
-      isInitialCenter = false;
-
+      // 1. Rimuovi i layer precedenti se esistono
       if (gpsMarker) {
           map.removeLayer(gpsMarker);
-          gpsMarker = null;
       }
       if (accuracyCircle) {
           map.removeLayer(accuracyCircle);
-          accuracyCircle = null;
       }
+
+      // 2. Crea Cerchio di accuratezza
+      accuracyCircle = L.circle(latlng, radius, {
+          color: '#1a73e8', // Blu
+          fillColor: '#1a73e8',
+          fillOpacity: 0.15,
+          weight: 1,
+      }).addTo(map);
+
+      // 3. Crea Marker della posizione corrente (PULSE/TU SEI QUI)
+      gpsMarker = L.circleMarker(latlng, {
+          radius: 8,
+          color: '#fff',
+          weight: 3,
+          fillColor: '#1a73e8',
+          fillOpacity: 1,
+      }).addTo(map)
+        // ✨ MODIFICA: Il messaggio richiesto
+        .bindPopup("Tu sei qui")
+        .openPopup();
       
-      const gpsButton = document.getElementById('gpsButton');
+      // 4. Determina lo zoom ottimale
+      let targetZoom = 17;
+      if (radius < 20) {
+          targetZoom = 18;
+      } else if (radius > 100) {
+          targetZoom = 16;
+      }
+
+      // 5. Centra la mappa (FlyTo)
+      map.flyTo(latlng, targetZoom + 3, {
+           duration: 1.5,
+      });
+      
+      // 6. Aggiorna lo stato del pulsante dopo la localizzazione
       gpsButton.disabled = false;
-      gpsButton.textContent = '⚲';
-      gpsButton.style.backgroundColor = '#007800cc';
+      gpsButton.textContent = '◉ Trovato'; // Indica il successo
+      gpsButton.style.backgroundColor = '#00aaff'; // Blu
+
+      // Riporta il pulsante allo stato iniziale dopo un timeout
+      setTimeout(() => {
+          if (gpsButton.textContent === '◉ Trovato') {
+              gpsButton.textContent = '⚲';
+              gpsButton.style.backgroundColor = '#007800cc'; // Verde base
+          }
+      }, 3000); 
   }
 
+  // Funzione chiamata in caso di errore della localizzazione
+  function onLocationError(error) {
+      const gpsButton = document.getElementById('gpsButton');
+      gpsButton.disabled = false;
+      
+      let message = "Errore di localizzazione.";
+      
+      if (error.code === 1) {
+          // Questo è il caso in cui il browser dice "Permesso Negato"
+          message = "Accesso alla posizione negato. Concedi i permessi e riprova.";
+      } else if (error.code === 3) {
+          // Questo è il caso più comune per le richieste consecutive veloci: Timeout
+          message = "Timeout: La posizione non è stata trovata in tempo. Riprova tra pochi secondi.";
+      }
+      // Se l'errore è 2 (posizione non disponibile), il messaggio predefinito va bene.
+      
+      console.error("Errore di geolocalizzazione:", error.message, "Codice:", error.code);
+      alert(message);
+      
+      // Aggiorna lo stato del pulsante con un errore
+      gpsButton.textContent = '⚠ Errore';
+      gpsButton.style.backgroundColor = '#ff4500'; // Arancione/Rosso
+      
+      // Riporta il pulsante allo stato iniziale dopo un timeout
+      setTimeout(() => {
+          if (gpsButton.textContent === '⚠ Errore') {
+              gpsButton.textContent = '⚲';
+              gpsButton.style.backgroundColor = '#007800cc';
+          }
+      }, 3000); 
+  }
+  
+  // Nuova funzione per richiedere la posizione una sola volta
+  function getOneTimeLocation() {
+      closeAllUIs();
+      const gpsButton = document.getElementById('gpsButton');
+
+      // ⭐ 1. Controllo di sicurezza (come discusso nell'errore precedente)
+      if (!navigator.geolocation) {
+          alert("Il tuo browser non supporta la geolocalizzazione o non stai utilizzando HTTPS/localhost.");
+          gpsButton.disabled = true;
+          gpsButton.textContent = '❌ GPS Non Disp.'; 
+          gpsButton.style.backgroundColor = '#666'; 
+          return; 
+      }
+      
+      // 2. Aggiorna lo stato del pulsante
+      gpsButton.disabled = true; 
+      gpsButton.textContent = 'GPS...';
+      gpsButton.style.backgroundColor = '#ffc107'; // Giallo per "In Cerca"
+
+      // ⭐ 3. Chiama getCurrentPosition (localizzazione singola)
+      navigator.geolocation.getCurrentPosition(
+          onLocationSuccess, 
+          onLocationError, 
+          LOCATION_OPTIONS
+      );
+  }
   // =========================================================================
   // V. INIZIALIZZAZIONE E GESTIONE EVENTI (Listeners)
   // =========================================================================
@@ -541,6 +531,9 @@ function onLocationError(error) {
       const infoButton = document.getElementById('infoButton');
       const infoOverlay = document.getElementById('infoOverlay');
       const gpsButton = document.getElementById('gpsButton');
+      if (gpsButton) {
+          gpsButton.addEventListener('click', getOneTimeLocation);
+      }
       
       // Listener Menu
       menuButton.addEventListener('click', () => {
@@ -592,17 +585,6 @@ function onLocationError(error) {
               closeExitPrompt();
           }
       });
-      
-      // Listener GPS Button (Start/Recenter)
-      if (gpsButton) {
-          gpsButton.addEventListener('click', () => {
-              if (watchId === null) {
-                  startTracking();
-              } else {
-                  reCenterMap();
-              }
-          });
-      }
       
       // Listener per chiudere il menu cliccando sulla mappa
       map.on('click', () => {
