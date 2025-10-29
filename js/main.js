@@ -159,6 +159,42 @@
     }
   }
 
+function createEntranceIcon() {
+    return L.icon({
+    iconUrl: 'images/icon/location-pin.png', // Usa 'icons' al plurale e un nome file
+    iconSize: [32, 32], 
+    iconAnchor: [16, 32], 
+    popupAnchor: [0, -30] 
+});
+}
+
+// Funzione per aggiungere i marker degli ingressi, separati dal cluster dei POI
+function addEntranceMarkers(map) {
+    // Coordinate ipotetiche per i due ingressi (modifica se necessario)
+    const entrances = [
+        {
+            name: "Ingresso Principale",
+            latlng: [45.2291431342093, 11.656730930919622], // Latitudine, Longitudine (es. Nord/Est)
+            popupContent: "<b>Targa Ingresso 1</b>"
+        },
+        {
+            name: "Ingresso Sud",
+            latlng: [45.22869096746783, 11.657582931205894], // Latitudine, Longitudine (es. Sud/Ovest)
+            popupContent: "<b>Targa Ingresso 2</b>"
+        }
+    ];
+
+    entrances.forEach(entrance => {
+        // Crea il marker con l'icona personalizzata e aggiungilo direttamente alla mappa
+        L.marker(entrance.latlng, {
+          icon: createEntranceIcon(),
+          pane: 'circlePane'
+        })  
+            .addTo(map)
+            .bindPopup(entrance.popupContent); // Rende il marker cliccabile con un popup
+    });
+}
+
   // =========================================================================
   // III. FUNZIONI DI GESTIONE MAPPA E POIS
   // =========================================================================
@@ -227,6 +263,8 @@
     
     setupEventListeners(); // Chiama la funzione di setup degli eventi
     setupSidebarAndMarkers(pointFeatures);
+
+    addEntranceMarkers(map);
   }
 
   function updateCircleSizes() {
