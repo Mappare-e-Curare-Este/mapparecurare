@@ -89,6 +89,7 @@
     treeDetails.appendChild(imageContainer);
     document.getElementById('treeOverlay').classList.add('visible');
     
+    // 🌳 MODIFICA: Assicurati che l'hash sia #overlay e sostituisci lo stato esistente (#popup)
     if (location.hash.length > 0) {
         window.history.replaceState(null, '', location.pathname + '#overlay'); 
     } else {
@@ -109,6 +110,7 @@
     if (map) map.closePopup();
     unhighlightLayers(); 
     
+    // 🌳 CORREZIONE: Usa replaceState se c'è un hash, altrimenti pushState
     if (location.hash.length === 0 || location.hash === '#exit') {
         window.history.pushState(null, '', location.pathname + '#info');
     } else {
@@ -140,7 +142,7 @@
     const treeListMenu = document.getElementById('treeListMenu');
     treeListMenu.style.transform = 'translateX(0)';
     
-    // Quando il menu è aperto, aggiungi uno stato alla cronologia del browser.
+    // 🌳 MODIFICA: Quando il menu è aperto, aggiungi uno stato alla cronologia del browser.
     if (!location.hash.includes('#menu-open')) {
         window.history.pushState({ menuOpen: true }, '', '#menu-open');
     } else {
@@ -166,7 +168,7 @@
 
 function createEntranceIcon() {
     return L.icon({
-    iconUrl: 'images/Icon/location-pin.png',
+    iconUrl: 'images/Icon/location-pin.png', // Usa 'icons' al plurale e un nome file
     iconSize: [32, 32], 
     iconAnchor: [16, 32], 
     popupAnchor: [0, -30] 
@@ -175,6 +177,7 @@ function createEntranceIcon() {
 
 // Funzione per aggiungere i marker degli ingressi, separati dal cluster dei POI
 function addEntranceMarkers(map) {
+    // Coordinate ipotetiche per i due ingressi (modifica se necessario)
     const entrances = [
         {
             name: "Ingresso Principale",
@@ -220,6 +223,7 @@ function addEntranceMarkers(map) {
         });
     }
 
+    // ... (Logica dei Layer e Overlay Pane come prima)
     map.createPane('osmPane');
     map.getPane('osmPane').style.zIndex = 600;
 
@@ -245,12 +249,14 @@ function addEntranceMarkers(map) {
       disableClusteringAtZoom: 17,
       spiderfyOnMaxZoom: false
     });
-    // ... (Logica del Park GeoJSON)
+    // ... (Logica del Park GeoJSON come prima)
     const parkFeature = geojsonPois.features.find(f => f.geometry.type === "Polygon");
     const pointFeatures = geojsonPois.features.filter(f => f.geometry.type === "Point");
 
+    // 🌳 CORREZIONE CRITICA 1: Popola la featureLookup correttamente
+    // Questa riga era errata: pointFeatures = geojsonPois.feature.find(feature => { ... });
     pointFeatures.forEach(feature => {
-      featureLookup.set(feature.id, feature);
+      featureLookup.set(feature.properties.ID, feature);
     });
 
     if (parkFeature) {
@@ -285,7 +291,7 @@ function addEntranceMarkers(map) {
     const currentZoom = map.getZoom();
     const zoomDifference = currentZoom - 18;
     markers.eachLayer(function(layer) {
-
+      // Controlla se la proprietà è definita
       if (layer.options.radiusAtZoom18) { 
         const newRadius = layer.options.radiusAtZoom18 * Math.pow(2, zoomDifference);
         layer.setRadius(newRadius);
@@ -336,7 +342,7 @@ function addEntranceMarkers(map) {
       const popupContent = `
         <div class="tree-popup">
           <h3 class="popup-title">${treeName}</h3>
-          <button class="open-details-button" data-feature-id="${feature.id}">
+          <button class="open-details-button" data-feature-id="${feature.properties.ID}">
             Vedi Scheda Completa 🌳
           </button>
         </div>
@@ -352,8 +358,9 @@ function addEntranceMarkers(map) {
         pane: 'circlePane'
       });
       
+      // *** MODIFICA IMPORTANTE: Memorizza l'ID del feature e il raggio di default ***
       treeCircle.options.radiusAtZoom18 = radiusAtZoom18;
-      treeCircle.options.featureId = feature.id; 
+      treeCircle.options.featureId = feature.properties.ID; 
 
       treeCircle.bindPopup(popupContent, {
         closeButton: false,
@@ -372,8 +379,10 @@ function addEntranceMarkers(map) {
         highlightedLayers.push(this); 
         
         this.openPopup();
-        // Aggiungi un nuovo stato per permettere la chiusura con 'Indietro'
+        // 🌳 Aggiungi un nuovo stato per permettere la chiusura con 'Indietro'
         window.history.pushState(null, '', location.pathname + '#popup');
+
+        // ❌ LOGICA REMOSSA: Il click sul pulsante è gestito dal listener globale in setupEventListeners
       });
       
       markers.addLayer(treeCircle);
@@ -385,6 +394,7 @@ function addEntranceMarkers(map) {
     
     // Logica di chiusura del popup
     map.on('popupclose', function() {
+      // 🌳 MODIFICA: Invece di usare back(), rimuovi l'hash manualmente per non uscire se l'hash precedente è vuoto.
       if (location.hash.includes('#popup')) {
         window.history.replaceState(null, '', location.pathname); // Rimuove solo #popup
       }
@@ -392,37 +402,35 @@ function addEntranceMarkers(map) {
     });
   }
 
-  // Funzione per gestire la selezione della specie dal menù (AGGIORNATA con featureId)
-  function handleSpeciesSelection(speciesName, featuresOfSpecies) {
-    closeAllUIs(); 
+  // Funzione per gestire la selezione della specie dal menù
+function handleSpeciesSelection(speciesName, featuresOfSpecies) {
+  closeAllUIs(); 
 
-    const firstFeature = featuresOfSpecies[0]; 
-    const latlng = [firstFeature.geometry.coordinates[1], firstFeature.geometry.coordinates[0]];
-    
-    map.flyTo(latlng, 19); 
+  const firstFeature = featuresOfSpecies[0]; 
+  const latlng = [firstFeature.geometry.coordinates[1], firstFeature.geometry.coordinates[0]];
+  
+  map.flyTo(latlng, 19); 
 
-    map.once('moveend', () => {
-      markers.eachLayer(layer => {
-        // Usa l'ID del feature per l'abbinamento efficiente
-        const isMatch = featuresOfSpecies.some(f => f.id === layer.options.featureId);
+  map.once('moveend', () => {
+    markers.eachLayer(layer => {
+      const isMatch = featuresOfSpecies.some(f => f.properties.ID === layer.options.featureId);
 
-        if (isMatch) {
-            layer.setStyle({
-                fillColor: HIGHLIGHT_COLOR,
-                color: "",
-                weight: 3,
-            });
-            highlightedLayers.push(layer);
-            
-            // Se c'è un solo albero, apri il popup automaticamente per comodità
-            if (featuresOfSpecies.length === 1 && layer.options.featureId === firstFeature.id) {
-                 layer.openPopup();
-                 window.history.pushState(null, '', location.pathname + '#popup');
-            }
-        }
-      });
+      if (isMatch) {
+          layer.setStyle({
+              fillColor: HIGHLIGHT_COLOR, // Evidenziazione in Giallo
+              color: "",
+              weight: 3,
+          });
+          highlightedLayers.push(layer);
+          
+          if (featuresOfSpecies.length === 1 && layer.options.featureId === firstFeature.properties.ID) {
+               layer.openPopup();
+               window.history.pushState(null, '', location.pathname + '#popup');
+          }
+      }
     });
-  }
+  });
+}
 
   // =========================================================================
   // IV. FUNZIONI DI GEOLOCALIZZAZIONE (GPS)
@@ -458,7 +466,7 @@ function addEntranceMarkers(map) {
           fillColor: '#1a73e8',
           fillOpacity: 1,
       }).addTo(map)
-        
+        // ✨ MODIFICA: Il messaggio richiesto
         .bindPopup("Tu sei qui")
         .openPopup();
       
@@ -503,6 +511,7 @@ function addEntranceMarkers(map) {
           // Questo è il caso più comune per le richieste consecutive veloci: Timeout
           message = "Timeout: La posizione non è stata trovata in tempo. Riprova tra pochi secondi.";
       }
+      // Se l'errore è 2 (posizione non disponibile), il messaggio predefinito va bene.
       
       console.error("Errore di geolocalizzazione:", error.message, "Codice:", error.code);
       alert(message);
@@ -525,7 +534,7 @@ function addEntranceMarkers(map) {
       closeAllUIs();
       const gpsButton = document.getElementById('gpsButton');
 
-      // ⭐ 1. Controllo di sicurezza
+      // ⭐ 1. Controllo di sicurezza (come discusso nell'errore precedente)
       if (!navigator.geolocation) {
           alert("Il tuo browser non supporta la geolocalizzazione o non stai utilizzando HTTPS/localhost.");
           gpsButton.disabled = true;
@@ -561,6 +570,7 @@ function addEntranceMarkers(map) {
           gpsButton.addEventListener('click', getOneTimeLocation);
       }
       
+      // 🌳 CORREZIONE CRITICA 3: Gestore click globale per il pulsante nel popup (Event Delegation)
       document.addEventListener('click', function(e) {
         if (e.target && e.target.matches('.open-details-button')) {
             e.preventDefault(); 
@@ -589,6 +599,7 @@ function addEntranceMarkers(map) {
       menuButton.addEventListener('click', () => {
           if (treeListMenu.style.transform === 'translateX(0px)') {
               closeMenu();
+              // 🌳 MODIFICA: Rimuovi l'hash manualmente, non usare back() per non uscire
               if (location.hash.includes('#menu-open')) {
                    window.history.replaceState(null, '', location.pathname);
               }
@@ -601,11 +612,13 @@ function addEntranceMarkers(map) {
       infoButton.addEventListener('click', openInfoOverlay);
       document.querySelector('#infoOverlay .close-button').addEventListener('click', () => {
           closeInfoOverlay();
+          // 🌳 MODIFICA: Rimuovi l'hash manualmente, non usare back() per non uscire
           if (location.hash.includes('#info')) window.history.replaceState(null, '', location.pathname);
       });
       infoOverlay.addEventListener('click', e => {
         if (e.target === infoOverlay) {
             closeInfoOverlay();
+            // 🌳 MODIFICA: Rimuovi l'hash manualmente, non usare back() per non uscire
             if (location.hash.includes('#info')) window.history.replaceState(null, '', location.pathname);
         }
       });
@@ -613,11 +626,13 @@ function addEntranceMarkers(map) {
       // Listener Tree Overlay
       document.querySelector('#treeOverlay .close-button').addEventListener('click', () => {
           closeOverlay();
+          // 🌳 MODIFICA: Rimuovi l'hash manualmente, non usare back() per non uscire
           if (location.hash.includes('#overlay')) window.history.replaceState(null, '', location.pathname);
       });
       treeOverlay.addEventListener('click', e => {
         if (e.target === treeOverlay) {
             closeOverlay();
+            // 🌳 MODIFICA: Rimuovi l'hash manualmente, non usare back() per non uscire
             if (location.hash.includes('#overlay')) window.history.replaceState(null, '', location.pathname);
         }
       });
@@ -635,6 +650,7 @@ function addEntranceMarkers(map) {
       map.on('click', () => {
           if (treeListMenu.style.transform === 'translateX(0px)') {
               closeMenu();
+              // 🌳 MODIFICA: Rimuovi l'hash manualmente, non usare back() per non uscire
               if (location.hash.includes('#menu-open')) {
                    window.history.replaceState(null, '', location.pathname);
               }
@@ -673,9 +689,12 @@ window.onpopstate = () => {
     if (isExitPromptVisible && location.hash !== '#exit') {
         // Chiude l'interfaccia visiva
         closeExitPrompt(); 
+        // NON mettere 'return', lascia che il browser completi la navigazione (uscita dall'app).
         return; 
     }
 
+    // Se l'hash attuale è #exit E il prompt non è ancora visibile (dopo la prima pressione),
+    // significa che dobbiamo renderlo visibile.
     if (location.hash === '#exit' && !isExitPromptVisible) {
         showExitPrompt();
         return; 
@@ -712,6 +731,8 @@ window.onpopstate = () => {
 
       if (isCleanState && !isExitPromptVisible) {
         // Siamo in uno stato pulito e l'hash è stato rimosso (o non c'era).
+        
+        // 🌳 Correzione: Prima aggiungiamo l'hash fittizio, poi mostriamo il prompt.
         window.history.pushState({ exit: true }, '', location.pathname + '#exit'); 
         showExitPrompt();
         
@@ -726,4 +747,3 @@ window.onpopstate = () => {
     }
 };
 })();
-
