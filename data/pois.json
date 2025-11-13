@@ -1,183 +1,169 @@
 {
   "type": "CustomFeatureCollection",
   "speciesCatalog": [
-{
-        "Nome": "Ippocastano",
-        "Descrizione": "Aesculus hippocastanum",
-        "Storia": "L’ippocastano è una latifoglia caducifoglia molto diffusa in parchi, viali e giardini, apprezzata per la sua imponenza ornamentale. In natura è originario di una ristretta area dei Balcani settentrionali, ma è stato introdotto e coltivato in gran parte d’Europa, dove si è naturalizzato, soprattutto in zone collinari e montane. Può raggiungere i 30 metri di altezza ed è considerato una delle più maestose tra le specie ornamentali coltivate.<br><br> Le foglie sono composte e palmate, formate da 5–7 foglioline obovate disposte a raggiera, lunghe fino a 20–25 cm. Sono verde brillante sulla pagina superiore, più chiare e leggermente tomentose su quella inferiore. I giovani rami sono robusti e portano gemme molto grandi, ricoperte da una resina vischiosa. <br><br> La corteccia è inizialmente liscia e grigio-brunastra, ma con l’età tende a screpolarsi in placche irregolari, assumendo tonalità più scure e un aspetto fessurato. <br><br> Il nome del genere Aesculus era usato già dai Romani per alcune querce, mentre l’epiteto specifico hippocastanum deriva dal greco e significa “castagna del cavallo”, poiché in passato i semi venivano somministrati agli equini per alleviare disturbi respiratori. Questi semi, simili a quelli del castagno vero, non sono commestibili: contengono saponine e altre sostanze tossiche per l’uomo, anche se opportunamente trattati trovano impiego in fitoterapia. <br><br> Il portamento dell’albero è ampio e tondeggiante, con chioma densa e rami espansi. Negli esemplari maturi può assumere una forma imponente, talvolta irregolare, che lo rende particolarmente adatto a grandi spazi verdi.",
-        "image": "",
-        "raggio": 10
-      },
-
     {
-        "Nome": "Cedro dell'Himalaya",
-        "Descrizione": "Cedrus deodara",
-        "Storia": "Il cedro dell’Himalaya (Cedrus deodara) è una conifera sempreverde originaria delle montagne dell’Asia meridionale, in particolare della catena himalayana, dove cresce fino a 3.000 metri di altitudine. È una delle specie di cedro più coltivate in Europa per il suo valore ornamentale, grazie al portamento elegante e alla resistenza al freddo, superiore a quella di altri cedri. In condizioni favorevoli può raggiungere i 40–50 metri di altezza, talvolta anche i 60. <br><br> Gli aghi sono lunghi 2–5 cm, sottili e flessibili, di colore verde chiaro o glauco, disposti a spirale sui rametti corti. I giovani rami, caratteristicamente penduli e arcuati, conferiscono alla pianta un aspetto maestoso e armonioso. <br><br> La corteccia nei primi anni è liscia e grigio chiaro, mentre con l’età tende a screpolarsi, diventando rugosa e di colore grigio scuro, talvolta con riflessi violacei. <br><br> Il nome del genere Cedrus deriva dal greco kedros, utilizzato per indicare alberi aromatici, mentre l’epiteto deodara proviene dal sanscrito devadāru, che significa “albero degli dèi”. Questo riflette il valore sacro attribuito alla specie nella tradizione indiana, dove era spesso venerata e utilizzata nei templi. <br><br> Il portamento è piramidale nei primi anni, con cima spesso pendula; con la maturità la chioma si allarga, assumendo forme più espanse e talvolta irregolari, pur mantenendo l’eleganza dei rami ricadenti.",
-        "image": "",
-        "raggio": 8
-      },
-
-    {
-        "Nome": "Sofora del Giappone",
-        "Descrizione": "Sophora japonica",
-        "Storia": "La sofòra del Giappone è un albero originario della Cina e della Corea, ma coltivato da secoli in Giappone, da cui prende il nome comune. È molto apprezzato come pianta ornamentale in parchi, viali e giardini europei grazie alla sua eleganza e alla buona tolleranza all’inquinamento urbano. <br><br> È una specie eliofila, che predilige esposizioni soleggiate e suoli ben drenati. Si sviluppa con una chioma ampia e arrotondata, ideale per creare ombra, e tollera meglio la siccità rispetto a molte altre latifoglie ornamentali. <br><br> Il fusto è grigio-brunastro, liscio negli esemplari giovani e più fessurato con l’età. Le foglie, imparipennate, sono formate da 7–17 foglioline ovali di colore verde brillante, disposte alternamente sui piccioli. <br><br> In tarda estate, la pianta produce vistosi fiori giallo-crema, riuniti in grandi pannocchie erette, molto apprezzati per il loro valore ornamentale e come fonte di nettare per le api. I frutti sono legumi carnosi, articolati, che ricordano una collana di perle e restano a lungo sulla pianta anche in autunno; sono però tossici per l’uomo se ingeriti. <br><br> Il nome del genere Styphnolobium deriva dal greco styphnos (“astringente”) e lobos (“baccello”), in riferimento alla natura dei frutti. In passato la specie era inclusa nel genere Sophora, da cui deriva il nome comune. Il legno, seppur poco utilizzato, è duro e compatto, adatto per piccoli oggetti o lavori di intaglio.",
-        "image": [
-          "images/Sofora/Sofora_1_web.jpg",
-          "images/Sofora/Sofora_2_web.jpg",
-          "images/Sofora/Sofora_3_web.jpg"
-        ],
-        "raggio": 8
-      },
-
-    {
-        "Nome": "Olivo",
-        "Descrizione": "Olea europaea",
-        "Storia": "L’Olea europaea, comunemente chiamata olivo o ulivo, è originaria delle regioni del Mediterraneo orientale, in particolare della Grecia, Turchia e Levante, e da questa area deriva il suo nome comune. <br><br> Il nome scientifico:<br> ●\tOlea deriva dal latino e significa “oliva”.<br> ●\teuropaea indica la diffusione della specie nel continente europeo, in particolare nelle zone a clima mite del bacino mediterraneo.<br><br> L’olivo possiede foglie semplici, opposte e sempreverdi (persistenti), di colore verde-grigiastro sulla pagina superiore e argentee su quella inferiore, caratteristiche che lo rendono resistente a climi caldi e secchi. Le foglie sono lunghe 4–10 cm, strette, con margini interi e superficie coriacea, adatte a ridurre la perdita d’acqua. <br><br> La corteccia è grigiastra, fessurata con l’età, e il tronco è spesso contorto e irregolare, rendendo l’olivo immediatamente riconoscibile rispetto ad altre specie mediterranee. <br><br> In natura, l’olivo può formare boschetti spontanei, ma è ampiamente coltivato in oliveti, anche secolari, sia in pianura che in collina. È una delle piante simbolo della cultura mediterranea, sia per il valore ornamentale sia per la produzione di olive e olio.",
-        "image": "",
-        "raggio": 5
-      },
-
-    {
-        "Nome": "Tiglio",
-        "Descrizione": "Tilia americana",
-        "Storia": "Il Tiglio è un albero deciduo originario di Europa, Asia occidentale e Nord America, coltivato da secoli per la sua bellezza e le sue proprietà officinali. La sua chioma è ampia e tondeggiante, ideale per fornire ombra, mentre le foglie, cuoriformi e alterne, presentano un margine seghettato e misurano dai 6 ai 15 cm, con un verde chiaro brillante. <br><br> Tra maggio e luglio il tiglio si riempie di fiori profumati, di colore giallo pallido o crema, riuniti in infiorescenze pendule molto apprezzate dalle api per la produzione di miele. I frutti, piccole noci tondeggianti e legnose di colore grigio-bruno, maturano verso la fine dell’estate e contengono semi commestibili in piccola quantità. <br><br> I fiori e le foglie del tiglio sono utilizzati nella medicina tradizionale europea per le loro proprietà calmanti, diaforetiche e antispasmodiche. Il nome del genere, Tilia, risale all’epoca romana e probabilmente deriva da termini indoeuropei legati alla fibra o alla corteccia, poiché quest’ultima veniva storicamente impiegata per ricavare materiali da intreccio. <br><br> Oggi il tiglio è molto diffuso come albero ornamentale nei viali cittadini e nei parchi, conferendo eleganza agli spazi verdi. Come molte altre piante arboree, il suo polline può provocare allergie, sebbene in misura generalmente minore rispetto ad altre specie.",
-        "image": "",
-        "raggio": 9
-      },
-
-    {
-        "Nome": "Magnolia di Soulange",
-        "Descrizione": "Magnolia soulangeana",
-        "Storia": "La Magnolia di Soulange è un albero o grande arbusto ornamentale, originario dell’Europa, risultato dell’incrocio tra Magnolia denudata e Magnolia liliiflora. Celebre per la spettacolarità della sua fioritura primaverile, questa magnolia è ampiamente coltivata in parchi, giardini e viali, dove offre un impatto visivo notevole grazie ai suoi fiori grandi e profumati. <br><br> Le foglie sono semplici, alterne, di forma ellittica o obovata, di colore verde brillante, che in autunno assumono sfumature gialle calde prima della caduta. La corteccia è liscia e grigio-brunastra nei giovani esemplari, diventando più rugosa con l’età. <br><br> I fiori, che compaiono in primavera prima o contemporaneamente alla comparsa delle foglie, possono raggiungere i 10–20 cm di diametro e presentano colori che variano dal bianco al rosa intenso, talvolta con sfumature porpora. Essi sono molto decorativi e contribuiscono a rendere la magnolia un simbolo di eleganza e raffinatezza nei giardini europei. <br><br> Il portamento della pianta è ampio e arrotondato, con rami ben distribuiti e leggermente arcuati, che conferiscono alla chioma un aspetto elegante e armonioso. Questa magnolia predilige esposizioni soleggiate o parzialmente ombreggiate e terreni ben drenati, tollerando climi temperati ma sensibile a gelate tardive che possono danneggiare i fiori primaverili. <br><br> Grazie alla combinazione di fiori profumati, fogliame decorativo e portamento armonioso, la Magnolia di Soulange è una delle specie più apprezzate per arricchire parchi e giardini con un tocco di bellezza precoce e scenografica.",
-        "image": "",
-        "raggio": 7
-      },
-
-    {
-        "Nome": "Acero Campestre",
-        "Descrizione": "Acer campestre",
-        "Storia": "L’Acero campestre è un albero a foglia caduca originario dell’Europa centrale e meridionale, dove cresce spontaneamente ai margini dei boschi, nelle siepi e nei campi aperti, spesso in compagnia di querce, frassini e carpini. <br><br> Le foglie sono palmato-lobate, generalmente con 3–5 lobi ottusi, e presentano un margine intero o leggermente dentato. Di colore verde opaco su entrambe le pagine, in autunno assumono sfumature calde di giallo oro, conferendo all’albero un aspetto particolarmente decorativo. <br><br> I giovani rami presentano talvolta una leggera pelosità, mentre la corteccia grigio-brunastra si fessura longitudinalmente con l’età. Questo adattamento permette all’albero di resistere sia alla siccità estiva sia alle basse temperature invernali. <br><br> L’acero campestre si adatta facilmente a suoli calcarei e argillosi e tollera esposizioni soleggiate e condizioni di stress idrico moderate. Il suo portamento compatto e le foglie relativamente piccole limitano l’evaporazione, rendendolo adatto anche a filari agricoli e bordi stradali. <br><br> Rustico e di crescita moderata, l’acero campestre ha una buona longevità, potendo superare i 150 anni in ambienti favorevoli, senza traumi ambientali o potature drastiche. La sua eleganza naturale e la resistenza lo rendono una scelta ideale sia per ambienti rurali sia per parchi e giardini ornamentali.",
-        "image": "",
-        "raggio": 10
-      },
-
-    {
-        "Nome": "Albero di Giuda",
-        "Descrizione": "Cercis siliquastrum L.",
-        "Storia": "Descrizione: albero caducifoglio (alto 3-8 m), con fusto per lo più irregolare e contorto; corteccia bruno-rossastra scura, da giovane liscia, poi con fini screpolature; rami irregolari grigi-rossastri; apparato radicale ramificato e profondo.<br><br> Foglie: alterne cuoriformi-orbicolari (diam. 5-10 cm), semplici, glabre ed intere, glauche di sotto, verdi più scure superiormente, con picciolo di 2-6 cm; nervature palmate che non raggiungono il bordo fogliare. <br><br> Fiori: ermafroditi schiudentisi appena prima della fogliazione, peduncolati, raccolti in fascetti densi inseriti direttamente sul fusto e sui rami vecchi (caulifloria); corolla a struttura papilionacea, color rosa-porporino o violacea con vessillo più piccolo delle ali. <br><br> Frutto: a legumi glabri, lineari, compressi, bruno-rossastri, lunghi fino a 10 cm, contenenti 10-14 semi ovali, duri, bruno-nerastri. <br><br> Origine: - Europa meridionale – Asia occidentale<br><br> Fioritura : Marzo - Aprile<br><br> Distribuzione in Italia: Presente in tutta Italia<br><br> Habitat: In boschi termofili di latifoglie (in particolare con la roverella), boscaglie e macchie; predilige suoli calcarei e rocciosi; da 0 a 800 m. <br><br> Etimologia: Il nome generico, dal greco “kerkis”, significa “navetta (o spola) da tessitore”, perché a tale strumento assomiglierebbe il legume delle piante; l’epiteto specifico, dal latino, con riferimento (in negativo: “siliquastrum” = “falso carrubo”) al carrubo (Ceratonia siliqua). <br><br> Il nome comune “albero di Giuda” si rifà alla leggenda secondo la quale l’apostolo Giuda, dopo il pentimento per il tradimento di Cristo, si sarebbe impiccato a quest’albero; secondo altri, il riferimento sarebbe alla Giudea, regione del Medio Oriente dove la pianta era - ed è - molto comune. <br><br> Curiosità: Si riporta che i fiori, melliferi, si possano friggere o mescolare alle insalate e conservare sott’aceto o in salamoia come i capperi e che i semi siano farinosi e nutrienti. Merita un cenno l’uso del legno, rosso-bruno a fine tessitura, duro, ma poco pesante, utilizzato per lavori d’intarsio, pezzi torniti e piccoli contenitori.",
-        "image": "",
-        "raggio": 7
-      },
-
-    {
-        "Nome": "Bosso Comune",
-        "Descrizione": "Buxus sempervirens",
-        "Storia": "Famiglia: Buxaceae Origine: pianta spontanea diffusa in Europa, Asia e Africa Caratteristiche generali: Arbusto sempreverde a crescita lenta, eretto e cespuglioso di altezza variabile tra i 2 e 4 m, longevo, dall’odore caratteristico; ha robuste radici ancoranti, fusto ingrossato alla base, tortuoso e ramificato, chioma folta. <br><br>  Originario dell’Europa, del Giappone e dell’altopiano himalayano, è molto utilizzato come pianta singola o come pianta da siepe; molto apprezzate le varietà nane, che costituiscono cuscini tondeggianti molto decorativi, oppure che permettono la realizzazione di piccole siepi, molto utilizzate nel “giardino all’italiana”, come nella maggior parte delle siepi dei Giardini del Castello. <br><br>  In primavera produce grappoli di fiorellini giallastri, insignificanti ma molto profumati; in estate, invece, produce  frutti tondeggianti, costituiti da capsule legnose contenenti piccoli semi. Le foglie di alcune varietà cambiano colore in inverno, tendendo a diventare giallo- Verdastre. <br><br>   Essendo il bosso una pianta a crescita molto lenta difficilmente si semina, più spesso per propagarla si prelevano talee lunghe 8-10 cm, in agosto-settembre, che vanno tenute in vaso anche per 2-3 anni prima di essere poste a dimora. Si tagliano le siepi e le singole piante nella forma voluta in agosto-settembre. <br><br> Malattie Parassiti Avversità: Occasionalmente viene colpito dagli afidi e dalla cocciniglia, ma più spesso le foglie vengono rovinate da un insetto chiamato cecidomia. <br><br> Curiosità: È; molto diffuso come ornamentale nei parchi e nelle siepi, soprattutto in giardini all’italiana, sopportando bene la potatura e conservando la forma obbligata per molto tempo, data la lentezza della crescita e in fogge fantasiose ( animali e labirinti) ottenute con l’arte topiaria. <br><br> In silvicoltura viene impiegato, grazie al robusto apparato radicale, per il consolidamento di terreni instabili, sassosi e aridi. <br><br> Il legno che se ne ricava, è  durissimo,  di colore giallo, liscio,  molto pregiato. Un tempo si fabbricavano le tavolette da scrittura e le pissidi, cioè le coppe per la conservazione delle ostie consacrate. Oggi il legno è impiegato per la costruzione di strumenti musicali a fiato, per le sculture lignee, per ebanisteria e intarsio, e per il modellismo navale.",
-        "image": "",
-        "raggio": 7
-      },
-
-    {
-        "Nome": "Glicine",
-        "Descrizione": "Wisteria sinensis (Sims) Sweet",
-        "Storia": "Il glicine secolare che accoglie i visitatori all’ingresso dei Giardini pubblici di Este è diventato un simbolo della città e spesso immortalato come “cartolina”. La fioritura del glicine, un’ondata di fiori lilla profumati, è uno spettacolo rinomato che attira turisti e viene celebrato in primavera. Pianta di dimensioni maestose, costituisce ornamento all’ingresso del castello, con la sua chioma sviluppata sulla merlatura delle mura. Il momento ideale per ammirare la maestosa fioritura è la primavera, durante il mese di aprile, quando i glicini esplodono in tutto il loro splendore. <br><br>  Posizione: la prima pianta si trova a sinistra dell’entrata della porta principale dei Giardini, accanto al Museo; la seconda più a est, all’entrata dei “Giardini nuovi”. <br> Le due piante di glicine imponenti sono state inserite nel Registro degli Alberi Monumentali Italiani - RAMI - un’organizzazione di volontariato che promuove la conoscenza e la tutela degli alberi monumentali in Italia. Accanto all’entrata est è collocata una targa, dalla quale prendiamo i dati di seguito sintetizzati. <br><br>  Età: 150 anni circa Circonferenza a 130 centimetri di altezza rispetto al terreno: 270 cm<br> Altezza del busto: 8.00 metri a 130 centimetri di altezza rispetto al terreno: 270 cm<br><br>  Descrizione: Pianta arbustiva rampicante con apparato radicale robusto, fusti villosi da giovani, con l’età diventano tronchi nodosi e contorti che raggiungono fino ai 20-30 metri di altezza, a seconda del sostegno. La corteccia è brunastra. Le foglie sono decidue, alterne, imparipennate, composte da 7-13 foglioline ovali lanceolate ad apice acuminato… I fiori ermafroditi e profumati sono riuniti in vistosi grappoli pendenti di colore azzurro-lilla o malva, penduli, lunghi anche 20-30 cm, che si schiudono pressoché tutti insieme. I frutti sono legumi di 10-15 cm, di colore marrone, vellutati. <br> È uno dei rampicanti da fiore più noti e diffusi nei giardini di tutta Europa. La specie, introdotta a scopo ornamentale, arrivò in Europa dalla Cina nel corso dell’800. <br><br>  Nota: tutte le parti della pianta contengono un glicoside chiamato “wisterina” (da cui il nome della pianta), che è tossico se ingerito e può provocare problemi all’apparato gastro-intestinale.",
-        "image": "",
-        "raggio": 5
-      },
-
-    {
-        "Nome": "Evonimo",
-        "Descrizione": "Euonymus japonicus",
-        "Storia": "Euonymus japonicus, noto anche come mandrino sempreverde o mandrino giapponese, è una pianta angiosperma della famiglia delle Celastracee, originaria di Giappone, Corea e Cina. <br> L’epiteto japonicus, deriva dal latino e si riferisce alla provenienza della specie.<br> È un arbusto sempreverde, talvolta alberello, che cresce fino a 2–8 m di altezza, con foglie ovali opposte lunghe 3–7 cm con margini finemente seghettati. I fiori sono di piccole dimensioni, di colore verde-bianco, di 5 mm di diametro. In autunno il tegumento rosa dei semi si apre e da esso fuoriescono i frutti arancioni, che pendono dall’involucro. <br><br>  Euonymus japonicus è una pianta ornamentale molto diffusa per decorare parchi e giardini nella sua zona di origine ma anche in Europa e nord America. In particolare le numerose cultivar che sono state selezionate (spesso con foglie gialle o variegate) sono ampiamente coltivate in tutti i tipi di terreno, sia al sole che all’ombra. <br><br>  Descrizione La pianta di Euonymus japonicus “Green Rocket” è un piccolo arbusto sempreverde, folto e cespuglioso, dalla forma eretta e compatta. Le sue piccole foglie, da obovate a strettamente ovali, dentate e coriacee, sono lucide e di colore verde scuro. Si adatta molto bene sia alle zone soleggiate che a quelle ombreggiate. Questo arbusto, apprezzato per il suo fogliame lucido e compatto, i vivaci colori autunnali e i frutti decorativi, è ideale per essere utilizzato in macchie o in siepi di media altezza. I frutti sono tossici per l’uomo. <br><br>  Ecologia e Habitat: Originario del Giappone, Cina e Corea. Coltivato ampiamente come pianta ornamentale in tutto il mondo, spesso utilizzato per siepi, cespugli isolati e come pianta da vaso. Si adatta a diversi tipi di suolo, preferibilmente ben drenati, e tollera l’inquinamento atmosferico. <br><br>  Utilizzi: Principalmente ornamentale, grazie alla sua fogliame persistente e alla possibilità di potature per creare forme diverse. Utilizzato in giardinaggio per siepi formali e informali, bordure e come pianta da contenitore. Alcune varietà sono apprezzate per il fogliame variegato. Da evitare in prossimità di bambini piccoli a causa della tossicità dei frutti Due piante si trovano ai Giardini nuovi (numeri 0709 e 0710) in prossimità della torre di mezzo del lato est del Castello.",
-        "image": "",
-        "raggio": 7
-      },
-
-    {
-        "Nome": "Tasso",
-        "Descrizione": "Taxus baccata",
-        "Storia": "Il tasso comune, appartenente alla famiglia delle Tassacee e al genere Taxus, è una conifera sempreverde capace di raggiungere 15–25 metri di altezza. La chioma, fitta e regolare, può estendersi fino a 10 metri di diametro, mentre il tronco, tozzo e ramificato fin dalla base, raramente supera 1 metro di diametro, ma in casi eccezionali può raggiungere dimensioni molto maggiori. <br><br>  Specie estremamente longeva, può vivere fino a 2.000 anni o più, quando le condizioni ambientali lo consentono. <br> Il tasso è una pianta sciafila (amante dell’ombra) e calcicola (predilige terreni ricchi di calcio). È diffuso in gran parte dell’Europa, e in Italia cresce nelle faggete e nelle abetine tra i 900 e i 1.800 metri di altitudine. Il genere Taxus è rappresentato anche in America settentrionale e in Asia, con 7–8 specie strettamente affini al tasso europeo. <br><br>  Il portamento del tasso è in genere piramidale, con rami divaricati e ramuli penduli. Le foglie, piatte e lineari, sono tenere e acute, di un verde scuro lucente sulla pagina superiore e con due bande più chiare su quella inferiore. <br><br>  Il tasso è una pianta dioica, cioè presenta individui maschili e femminili distinti. I semi, contenuti in un involucro carnoso e mucillaginoso di colore rosso vivo chiamato arillo (o urceolo), sono tossici, mentre l’arillo stesso è commestibile. <br><br>  Tutte le altre parti della pianta — in particolare foglie, corteccia e semi — contengono tassina, un alcaloide velenoso che in passato rese il tasso celebre come “albero della morte”. Nelle epoche medievali e rinascimentali era frequente trovarlo nei giardini nobiliari, dove veniva apprezzato sia per la sua bellezza ornamentale, sia per l’uso del veleno nelle lotte tra fazioni. <br><br>  Il legno del tasso, dal durame rosso porpora e alburno biancastro, è duro, pesante e pregiato, adatto al tornio, all’ebanisteria e alla scultura. Nonostante la sua tossicità, la tassina ha trovato impiego farmaceutico moderno: da essa si estraggono principi attivi usati nella chemioterapia, soprattutto nel trattamento dei tumori ovarici e mammari.",
-        "image": [
-          "images/Tasso/Tasso_1_web.jpg",
-          "images/Tasso/Tasso_2_web.jpg",
-          "images/Tasso/Tasso_3_web.jpg"
-        ],
-        "raggio": 10
-      },
-
-    {
-        "Nome": "Ginkgo Biloba",
-        "Descrizione": "Ginkgo biloba",
-        "Storia": "Il Ginkgo biloba è una gimnosperma ed è l’unico rappresentante della famiglia delle Ginkgoacee e dell’intero ordine delle Ginkgoales. È considerato un vero e proprio fossile vivente: le sue prime tracce fossili risalgono a circa 250 milioni di anni fa, nel Permiano, con resti rinvenuti in Cina. <br><br>  Il suo straordinario successo evolutivo è probabilmente dovuto alla notevole capacità di adattamento a condizioni ambientali estreme, quali l’inquinamento atmosferico, la siccità prolungata e le temperature molto basse — fino a –34 °C. La specie, tuttavia, ha rischiato l’estinzione: ritenuta scomparsa per secoli, fu riscoperta in alcuni monasteri cinesi, dove i monaci iniziarono a proteggerla e coltivarla, apprezzandone soprattutto l’eleganza ornamentale. <br><br>  Il nome “Ginkgo” deriva probabilmente da un errore di trascrizione del botanico tedesco Engelbert Kaempfer, che traslitterò il termine giapponese ginkyō invece di ginnan. Questo termine proviene dal cinese yín xìng (银杏), che significa “albicocca d’argento”. Il nome “biloba”, invece, deriva dal latino bis (“due”) e lobus (“lobo”), in riferimento alla forma bilobata delle foglie. <br><br>  Il Ginkgo biloba può raggiungere 30–40 metri di altezza, con una chioma fino a 9 metri di diametro: piramidale negli individui giovani e più ovale e ampia negli alberi maturi. Il tronco, inizialmente sottile e ramificato in modo irregolare, tende con gli anni a infittirsi e raddrizzarsi. <br> Le foglie, lunghe 5–8 cm, presentano una lamina a ventaglio, dal picciolo allungato, verde chiaro in primavera ed estate, che diventa giallo oro in autunno. La superficie fogliare è percorsa da nervature dicotomiche, tipiche della specie. <br><br>  Essendo una gimnosperma dioica, il Ginkgo presenta individui maschili e femminili separati. Non produce veri e propri fiori, ma strutture coniche (strobili) che contengono i semi. Nei soggetti femminili, i semi sono avvolti da un involucro carnoso, detto sarcotesta, che contiene acidi carbossilici responsabili del caratteristico odore sgradevole emesso quando i semi cadono a terra e si decompongono. <br><br>  La corteccia è argentea nelle piante giovani, assumendo con l’età toni dal grigio-bluastro al marrone scuro. Il Ginkgo è una pianta eliofila (ama la luce diretta del sole), resistente e adattabile, benché prediliga suoli acidi e un clima temperato-fresco.",
-        "image": [
-          "images/Ginkgo_Biloba/Ginkgo_Biloba_1_web.jpg",
-          "images/Ginkgo_Biloba/Ginkgo_Biloba_2_web.jpg",
-          "images/Ginkgo_Biloba/Ginkgo_Biloba_3_web.jpg"
-        ],
-        "raggio": 8
-      },
-
-    {
-        "Nome": "Abete Greco",
-        "Descrizione": "Abies cephalonica",
-        "Storia": "L'abete greco, o abete di Cefalonia, è una gimnosperma della famiglia delle Pinacee tipica delle regioni meridionali della Penisola balcanica. <br><br> È noto in sede scientifica come Abies cephalonica dove Abies indica il nome del genere, che potrebbe essere connesso al termine greco Abios, ossia \"longevo\", mentre il nome specifico Cephalonica deriverebbe dal termine, sempre greco, Cephallenia, facente riferimento all' isola di Cefalonia delle Ionie, uno dei siti di maggiore presenza della specie. Ha un portamento conico. Di rado supera i 25 metri di altezza sebbene possa spingersi fino a 35 metri, e raggiunge mediamente una circonferenza che può variare tra i 2,4 e i 3,3 metri. Presenta i rami disposti regolarmente, rami sui quali si innestano ramuli color bruno lucente. Le foglie aghiformi crescono fino a 2-3 cm con un colore verde brillante sulla pagina superiore e con due strutture bianco argento separate da una nervatura verde sulla pagina inferiore. <br><br> Sviluppa gemme rossicce e resinose, di norma ovoidali o coniche. <br> Questi abeti sono poi divisi tra individui di sesso maschile e individui di sesso femminile. I maschi generano gli strobili (più comunemente noti come pigne) oblunghi, mentre le femmine sviluppano strobili cilindrici e affusolati. <br><br> I semi, infine, sono rossastri e lunghi circa 2 cm. <br> La corteccia è tendenzialmente grigio-bruna. <br> Ritornando al suo habitat tipico, l'abete di Cefalonia ama i suoli montani calcarei, collocandosi tra i 700 e i 1700 metri di altitudine dove si sviluppa in boschi puri o in associazione con altre specie arboree come il faggio orientale, il castagno europeo, il pino nero e l'abete bianco. Con quest'ultimo in particolare tende a ibridarsi dando così vita al cosiddetto abete bulgaro o abete di Macedonia, (Abies borisii regis) spesso usato in progetti di riforestazione.",
-        "image": [
-          "images/Abete_Greco/Abete_Greco_1_web.jpg",
-          "images/Abete_Greco/Abete_Greco_2_web.jpg",
-          "images/Abete_Greco/Abete_Greco_3_web.jpg"
-        ],
-        "raggio": 10
-      },
-
-    {
-        "Nome": "Carpino Bianco",
-        "Descrizione": "Carpinus betulus",
-        "Storia": "Il carpino bianco è un albero della famiglia delle Betulaceae, specie autoctona largamente diffusa in Europa centrale e sud-orientale fino al Caucaso, che si può trovare anche fino alla parte meridionale della penisola scandinava. In Italia è presente in tutte le regioni, tranne nelle isole. Si estende dalla pianura (insieme alla Farnia costituiva le foreste primarie che un tempo coprivano la Pianura Padana) al piano montano fino a 1000 metri di altitudine dove convive in genere con altre latifoglie come Querce, Faggi, Noccioli. Nelle strade, giardini e parchi di città i carpini bianchi sono presenti come alberi ornamentali utilizzati per filari ordinati e specialmente per formare siepi: sono infatti apprezzati per la loro resistenza alle potature e per le fitte chiome, che d'inverno mantengono le foglie secche ingiallite. Il carpino bianco è un albero di media altezza (può raggiungere i 25 m) e in questo parco ve ne sono 7 esemplari.<br><br> La chioma è densa, ampia e globosa e i rami tendenzialmente ascendenti danno all’albero una forma slanciata. Il fusto è spesso irregolare e scanalato (costolato): sulla corteccia sottile, liscia e grigio-brunastra con l’età iniziano ad apparire striature grigio-argentee e altre più chiare. Le foglie sono alterne, di forma ovato-oblunga con apice appuntito, hanno un margine a doppia dentatura e sono di colore verde intenso. Sono ben visibili le nervature parallele, in rilievo sulla pagina inferiore delle foglie. <br><br> I fiori sono riuniti in infiorescenze (dette “amenti”) che sbocciano a inizio primavera: quelli maschili sono penduli (fino a 12 cm) e giallastri, quelli femminili sono più corti, verdastri e all’apice dei rametti. I frutti maturano in autunno e sono acheni in cui i semi (come piccole noci) sono attaccati ad una brattea (piccola foglia) trilobata che ne facilita la dispersione mediante il vento. <br><br> Il nome potrebbe derivare dalle parole celtiche “car” (legno) e “pen” (testa) riferendosi al fatto che il suo legno veniva utilizzato per costruire i gioghi dei buoi da traino poiché particolarmente duro. Tuttavia il legno è poco resistente agli agenti esterni, soprattutto in ambienti umidi. Viene usato per produrre oggetti di piccole dimensioni (tra cui parti meccaniche per i pianoforti) ed è considerato un ottimo combustibile.",
-        "image": "",
-        "raggio": 9
-      },
-
-    {
-        "Nome": "Tuia Occidentale",
-        "Descrizione": "Thuja occidentalis",
-        "Storia": "La tuia occidentale, o cedro bianco, è una specie appartenente alla famiglia delle Cupressaceae. Originario della parte orientale del Nord America e del Canada, questo albero è stato introdotto in Europa nel ‘500 come pianta ad uso ornamentale. Cresce tipicamente in habitat umidi e freschi, spesso associata a suoli calcarei o ricchi di sostanza organica, in particolare vicino a corsi d'acqua, paludi e zone umide. Si trova anche su pendii rocciosi e affioramenti calcarei. Resiste bene al freddo e si adatta a diverse condizioni di luce, dal pieno sole all'ombra parziale. L'accrescimento è lento e regolare. <br><br> La tuia è una conifera sempreverde dal portamento colonnare con una chioma stretta e conica e con rami ascendenti. In Italia è coltivata in parchi e giardini, soprattutto per formare siepi compatte ed eleganti. In questo parco sono presenti ben 16 esemplari di Thuja Occidentalis. <br><br> La corteccia è spessa, fibrosa e di colore bruno-rossiccio, con fessure verticali e tendente a sfaldarsi in lunghe strisce. Le foglie sono squamiformi e appressate ai rametti; se strofinate, rilasciano un aroma resinoso tipico delle conifere. I singoli rametti sono appiattiti, con una forma a ventaglio e di colore verde brillante che può virare al bronzo nella stagione invernale. I fiori maschili sono piccoli e apicali, colorati, quelli femminili prima gialli e poi bruni. La fioritura, poco appariscente, avviene tra marzo e aprile. I coni (detti anche strobili) sono i corpi fruttiferi: legnosi, piccoli, di forma oblunga (lunghi fino a 10-15 mm), di colore rosso-brunastri e composti da 6-8 squame sottili e coriacee che maturano in autunno rilasciando piccoli semi alati. <br><br>  Curiosità: <br> La T. occidentalis contiene tannini, oli essenziali e flavonoidi. Il legno veniva utilizzato di frequente dagli indiani d'America per la forza, leggerezza e durevolezza che lo rende adatto a diversi lavori, come la costruzione di case e di canoe. Le foglie e i rami raccolti venivano bolliti nel lardo in modo da ottenere una soluzione utilizzata dagli Indiani d'America per alleviare dolori articolari e muscolari, malaria, tosse, gotta e reumatismi.",
-        "image": "",
-        "raggio": 9
-      },
-
-    {
-        "Nome": "Pino",
-        "Descrizione": "Pinus Pinea",
-        "Storia": "Pino di prova",
-        "image": "",
-        "raggio": 9
-      },
-
-    {
-        "Nome": "Mirabolano var. Pissardii",
-        "Descrizione": "Prunus cerasifera",
-        "Storia": "Mirabolano Pissardi",
-        "image": "",
-        "raggio": 9
-      }
-
-  ],
-
-"features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Magnolia di Soulange",
-        "ID": 1
-      },
-      "geometry": {
-        "coordinates": [
-          11.658108724422215,
-          45.22920565072023
-        ],
-        "type": "Point"
-      }
+      "Nome": "Abete Greco",
+      "Descrizione": "Abies cephalonica",
+      "Storia": "L’abete greco è una conifera sempreverde originaria della Grecia, che cresce spontaneamente nelle regioni montuose della Penisola Balcanica. È un albero longevo che può raggiungere i 30 metri di altezza e ha una chioma di forma conica che si restringe in vetta. <br><br> Le foglie, o aghi, sono corte, rigide e appuntite, di colore verde intenso e lucide. Sono disposte a spirale intorno ai rami, ma si piegano verso l’alto, coprendo il rametto. <br><br> La corteccia è inizialmente liscia e grigio-brunastra, poi si screpola in piccole placche scure. <br><br> L’abete greco è apprezzato come pianta ornamentale per la sua resistenza e la sua capacità di adattarsi a diversi tipi di terreno. Il legno viene utilizzato in falegnameria per la realizzazione di mobili e nell’industria della carta.",
+      "image": "/species/abete-greco.jpg",
+      "raggio": 15
     },
+    {
+      "Nome": "Acero Campestre",
+      "Descrizione": "Acer campestre",
+      "Storia": "L’acero campestre è una latifoglia caducifoglia autoctona, diffusa in gran parte dell'Europa centro-meridionale e in Italia, sia in boschi misti che come albero isolato o per formare siepi. È un albero di medie dimensioni che non supera i 15-20 metri di altezza e ha una chioma espansa e globosa. <br><br> Le foglie, piccole e a tre lobi, sono di colore verde scuro e lucide, con una forma caratteristica che ricorda una mano aperta. In autunno assumono una colorazione giallo brillante. <br><br> La corteccia è grigio-brunastra, fessurata longitudinalmente e con il tempo si sfalda in placche rettangolari. <br><br> I fiori sono giallo-verdastri, poco appariscenti, ma sono seguiti da un frutto a doppia samara, dotato di due ali membranose che gli permettono di planare lontano dall’albero madre. <br><br> L’acero campestre è spesso utilizzato per alberature stradali e in parchi e giardini per la sua resistenza e la sua bellezza autunnale. Il legno, duro e compatto, è apprezzato per lavori di falegnameria e scultura.",
+      "image": "/species/acero-campestre.jpg",
+      "raggio": 11
+    },
+    {
+      "Nome": "Albero di Giuda",
+      "Descrizione": "Cercis siliquastrum",
+      "Storia": "L’albero di Giuda è una latifoglia caducifoglia di origine mediterranea, diffusa in Europa meridionale e in Asia occidentale. È un albero di piccole dimensioni che raramente supera i 10 metri di altezza e ha una chioma espansa e irregolare. <br><br> La sua caratteristica più distintiva è la fioritura precoce, che avviene in primavera, prima della comparsa delle foglie. I fiori, di colore rosa-violaceo intenso, sono raccolti in mazzetti lungo i rami, anche sul tronco (caulifloria). <br><br> Le foglie sono cuoriformi, di colore verde-azzurro, e compaiono dopo la fioritura. <br><br> La corteccia è inizialmente liscia e grigio-brunastra, poi si fessura in piccole placche. <br><br> Il nome comune “Albero di Giuda” deriva da una leggenda secondo cui Giuda Iscariota si sarebbe impiccato a un albero di questa specie dopo aver tradito Gesù Cristo. Per la sua fioritura spettacolare, è molto utilizzato in giardini e viali come albero ornamentale.",
+      "image": "/species/albero-di-giuda.jpg",
+      "raggio": 10
+    },
+    {
+      "Nome": "Bagolaro",
+      "Descrizione": "Descrizione non disponibile.",
+      "Storia": "Storia non disponibile.",
+      "image": "",
+      "raggio": 0
+    },
+    {
+      "Nome": "Bosso Comune",
+      "Descrizione": "Buxus sempervirens",
+      "Storia": "Il bosso comune è un arbusto o piccolo albero sempreverde originario dell’Europa, del Nord Africa e dell’Asia occidentale, tipico della macchia mediterranea e dei sottoboschi. È una specie a crescita lenta, molto longeva, che raramente supera i 5 metri di altezza. <br><br> Le foglie sono piccole, ovali, lucide e di colore verde scuro, disposte in modo opposto lungo i rami. Mantengono il loro colore anche durante l’inverno. <br><br> I fiori sono piccoli, insignificanti e di colore giallo-verdastro, ma sono profumati e compaiono in primavera. <br><br> La corteccia è sottile, liscia e grigio-brunastra. <br><br> Il legno, molto duro e compatto, è apprezzato in ebanisteria per lavori di intaglio e tornitura. Il bosso è noto per la sua tolleranza alla potatura, che lo rende uno degli arbusti più utilizzati nell’arte topiaria per creare siepi e figure geometriche.",
+      "image": "/species/bosso-comune.jpg",
+      "raggio": 8
+    },
+    {
+      "Nome": "Carpino Bianco",
+      "Descrizione": "Carpinus betulus",
+      "Storia": "Il carpino bianco è una latifoglia caducifoglia autoctona, diffusa in gran parte dell'Europa e dell'Asia occidentale, in Italia presente in boschi misti di latifoglie. È un albero di medie dimensioni che può raggiungere i 20-25 metri di altezza e ha una chioma densa e ovoidale. <br><br> Le foglie sono ovali, seghettate, di colore verde scuro e presentano nervature molto marcate. In autunno assumono una colorazione giallo-arancio. <br><br> La corteccia è liscia e grigio-chiara, con caratteristiche venature verticali e sinuose che ricordano la muscolatura del tronco. <br><br> Il frutto è una piccola noce racchiusa in una brattea trilobata, che aiuta la dispersione anemofila. <br><br> Il legno è molto duro e resistente, utilizzato in passato per la costruzione di attrezzi e utensili. È un albero spesso impiegato per siepi e alberature stradali per la sua resistenza alla potatura e la sua capacità di adattarsi a diversi tipi di terreno.",
+      "image": "/species/carpino-bianco.jpg",
+      "raggio": 15
+    },
+    {
+      "Nome": "Cedro dell'Himalaya",
+      "Descrizione": "Cedrus deodara",
+      "Storia": "Il cedro dell’Himalaya è una conifera sempreverde originaria dell’Himalaya occidentale (Afghanistan, Pakistan e India), introdotta in Europa a metà dell’Ottocento. È un albero maestoso e longevo che può raggiungere i 60 metri di altezza e ha una chioma conica e ampia. <br><br> Gli aghi, di colore verde-azzurro, sono lunghi, morbidi e riuniti in densi ciuffi. Hanno una disposizione caratteristica, pendula e ricadente, che conferisce alla chioma un aspetto elegante. <br><br> La corteccia è scura, fessurata e rugosa. <br><br> I frutti sono pigne erette, cilindriche e di colore bruno-rossastro. <br><br> Il cedro dell’Himalaya è molto apprezzato come pianta ornamentale per la sua eleganza e la sua maestosità, e si trova spesso in parchi e grandi giardini. In India, il suo legno aromatico è utilizzato per la costruzione di templi e per le sue proprietà insetticide.",
+      "image": "/species/cedro-himalaya.jpg",
+      "raggio": 20
+    },
+    {
+      "Nome": "Cipresso dell'Arizona",
+      "Descrizione": "Descrizione non disponibile.",
+      "Storia": "Storia non disponibile.",
+      "image": "",
+      "raggio": 0
+    },
+    {
+      "Nome": "Evonimo",
+      "Descrizione": "Euonymus europaeus",
+      "Storia": "L’evonimo comune, o berretta del prete, è un arbusto o piccolo albero caducifoglio autoctono, diffuso in Europa e in Asia occidentale, in Italia presente in boschi e siepi. È un arbusto di piccole dimensioni che raramente supera i 6 metri di altezza. <br><br> Le foglie sono ovali, appuntite e di colore verde scuro, che in autunno assumono una vivace colorazione rossa. <br><br> I fiori sono piccoli e insignificanti, di colore giallo-verdastro, ma sono seguiti da frutti molto appariscenti: capsule a quattro lobi di colore rosa-rossastro, che si aprono per rivelare semi arancioni. Questa forma caratteristica ricorda il cappello del prete, da cui il nome comune. <br><br> La corteccia è liscia e grigio-brunastra. <br><br> L’evonimo è spesso utilizzato in giardini e siepi per il suo fogliame autunnale colorato e i suoi frutti ornamentali, sebbene siano tossici per l’uomo. Il legno, duro e compatto, era utilizzato in passato per la realizzazione di fusi per filare.",
+      "image": "/species/evonimo.jpg",
+      "raggio": 8
+    },
+    {
+      "Nome": "Ginkgo Biloba",
+      "Descrizione": "Ginkgo biloba",
+      "Storia": "Il ginkgo biloba è una latifoglia caducifoglia originaria della Cina, considerata un fossile vivente, in quanto unica specie sopravvissuta di un ordine di piante esistente 270 milioni di anni fa. È un albero longevo e maestoso che può raggiungere i 30-40 metri di altezza e ha una chioma conica o piramidale. <br><br> Le foglie, uniche tra le latifoglie, hanno una forma a ventaglio, biloba, di colore verde chiaro. In autunno assumono una spettacolare colorazione giallo oro intenso prima di cadere, rendendo l'albero un punto focale in parchi e giardini. <br><br> La corteccia è grigio-brunastra e fessurata longitudinalmente. <br><br> È una specie dioica, con esemplari maschili che producono polline e femminili che producono un frutto carnoso e maleodorante, per questo motivo si preferisce piantare gli esemplari maschili. <br><br> Il ginkgo è noto per la sua resistenza all'inquinamento atmosferico e la sua longevità, ed è ampiamente utilizzato in fitoterapia per le sue proprietà benefiche.",
+      "image": "/species/ginkgo-biloba.jpg",
+      "raggio": 15
+    },
+    {
+      "Nome": "Glicine",
+      "Descrizione": "Wisteria sinensis",
+      "Storia": "Il glicine è una pianta rampicante legnosa, originaria della Cina, introdotta in Europa all'inizio dell'Ottocento. È una pianta vigorosa e longeva, capace di raggiungere grandi dimensioni e di avvolgersi a sostegni, pergolati e alberi. <br><br> La sua caratteristica più distintiva è la fioritura spettacolare, che avviene in primavera, con lunghi grappoli pendenti di fiori profumatissimi, di colore viola-lilla, rosa o bianco. <br><br> Le foglie sono composte, pennate, formate da piccole foglioline ovali di colore verde brillante. <br><br> Il frutto è un baccello vellutato che contiene semi tossici. <br><br> Il glicine è una delle piante ornamentali più amate per la sua fioritura abbondante e profumata, ed è spesso utilizzato per ricoprire pareti, pergolati e archi in parchi e giardini. La sua crescita vigorosa richiede potature regolari per mantenerne la forma e favorire la fioritura.",
+      "image": "/species/glicine.jpg",
+      "raggio": 8
+    },
+    {
+      "Nome": "Ippocastano",
+      "Descrizione": "Aesculus hippocastanum",
+      "Storia": "L’ippocastano è una latifoglia caducifoglia molto diffusa in parchi, viali e giardini, apprezzata per la sua imponenza ornamentale. In natura è originario di una ristretta area dei Balcani settentrionali, ma è stato introdotto e coltivato in gran parte d’Europa, dove si è naturalizzato, soprattutto in zone collinari e montane. Può raggiungere i 30 metri di altezza ed è considerato una delle più maestose tra le specie ornamentali coltivate.<br><br> Le foglie sono composte e palmate, formate da 5–7 foglioline obovate disposte a raggiera, lunghe fino a 20–25 cm. Sono verde brillante sulla pagina superiore, più chiare e leggermente tomentose su quella inferiore. I giovani rami sono robusti e portano gemme molto grandi, ricoperte da una resina vischiosa. <br><br> La corteccia è inizialmente liscia e grigio-brunastra, ma con l’età tende a screpolarsi in placche irregolari, assumendo tonalità più scure e un aspetto fessurato. <br><br> Il nome del genere Aesculus era usato già dai Romani per alcune querce, mentre l’epiteto specifico hippocastanum deriva dal greco e significa “castagna del cavallo”, poiché in passato i semi venivano somministrati agli equini per alleviare disturbi respiratori. Questi semi, o castagne matte, sono leggermente tossici per l’uomo, ma trovano impiego in fitoterapia.",
+      "image": "/species/ippocastano.jpg",
+      "raggio": 20
+    },
+    {
+      "Nome": "Magnolia Sempreverde",
+      "Descrizione": "Descrizione non disponibile.",
+      "Storia": "Storia non disponibile.",
+      "image": "",
+      "raggio": 10
+    },
+    {
+      "Nome": "Magnolia di Soulange",
+      "Descrizione": "Magnolia soulangiana",
+      "Storia": "La magnolia di Soulange è un ibrido ottenuto dall’incrocio tra la magnolia denudata e la magnolia liliflora, creata in Francia nel 1820 da Étienne Soulange-Bodin. È un arbusto o piccolo albero a foglia caduca, che raggiunge i 6-8 metri di altezza e ha una chioma arrotondata. <br><br> La sua caratteristica principale è la fioritura precoce e abbondante, che avviene in primavera prima della comparsa delle foglie. I fiori, grandi e a forma di coppa, sono di colore bianco e rosa, con sfumature più intense alla base. <br><br> Le foglie sono grandi, ovali e di colore verde chiaro. <br><br> La corteccia è liscia e grigio-brunastra. <br><br> La magnolia di Soulange è una delle magnolie ornamentali più apprezzate per la sua fioritura spettacolare e la sua resistenza al freddo, ed è spesso utilizzata come pianta singola in giardini e parchi.",
+      "image": "/species/magnolia-soulange.jpg",
+      "raggio": 10
+    },
+    {
+      "Nome": "Mirabolano var. Pissardii",
+      "Descrizione": "Prunus cerasifera 'Pissardii'",
+      "Storia": "Il Mirabolano, o Prunus cerasifera, è un albero da frutto originario dell'Asia occidentale e dell'Europa orientale, spesso coltivato per i suoi frutti (le prugne mirabolane) o utilizzato come portainnesto. La varietà 'Pissardii' è una cultivar ornamentale molto diffusa, apprezzata per il suo colore rosso-violaceo del fogliame e dei rami. <br><br> È un albero di medie dimensioni che può raggiungere i 10 metri di altezza e ha una chioma arrotondata. <br><br> Le foglie sono ovali, seghettate, di un caratteristico colore rosso-violaceo che mantiene per tutta la stagione vegetativa. <br><br> La fioritura è precoce, in primavera, con fiori rosa pallido o bianchi che compaiono prima delle foglie. <br><br> Il frutto è una piccola prugna commestibile, di colore rosso-violaceo. <br><br> Il Mirabolano 'Pissardii' è spesso utilizzato in parchi e viali per il suo valore ornamentale, in particolare per il contrasto cromatico del suo fogliame con il verde circostante. È una pianta rustica e resistente, che si adatta a diversi tipi di terreno.",
+      "image": "/species/mirabolano.jpg",
+      "raggio": 10
+    },
+    {
+      "Nome": "Nespolo del Giappone",
+      "Descrizione": "Descrizione non disponibile.",
+      "Storia": "Storia non disponibile.",
+      "image": "",
+      "raggio": 0
+    },
+    {
+      "Nome": "Olivo",
+      "Descrizione": "Olea europaea",
+      "Storia": "L’olivo è un albero sempreverde originario dell’Asia Minore e del Vicino Oriente, diffuso in tutta l’area mediterranea. È una pianta longeva e resistente, simbolo di pace e longevità, che può raggiungere i 10-15 metri di altezza. <br><br> Le foglie sono coriacee, lanceolate, di colore verde scuro sulla pagina superiore e argentee su quella inferiore. Questa bicromia è una caratteristica distintiva dell'olivo. <br><br> La corteccia è grigio-chiara, liscia quando la pianta è giovane, poi si fessura e diventa nodosa e contorta con l’età. <br><br> I fiori sono piccoli, bianchi e profumati, riuniti in grappoli. Il frutto, l’oliva, è una drupa carnosa di colore verde che diventa nero-violaceo a maturazione. <br><br> L’olivo è una pianta di fondamentale importanza economica per la produzione di olio e olive da tavola, ed è anche molto apprezzato come pianta ornamentale per la sua bellezza e la sua simbologia.",
+      "image": "/species/olivo.jpg",
+      "raggio": 12
+    },
+    {
+      "Nome": "Pino",
+      "Descrizione": "Pinus",
+      "Storia": "Il pino è una conifera sempreverde, diffusa in molte aree del mondo, in Italia presente in diverse specie, tra cui il pino domestico (Pinus pinea) e il pino marittimo (Pinus pinaster). È un albero longevo che può raggiungere i 30-40 metri di altezza. <br><br> Le foglie, o aghi, sono lunghe e sottili, riunite in fascetti di due, tre o cinque, a seconda della specie. <br><br> La corteccia è spessa, scura e fessurata, con caratteristiche placche rettangolari. <br><br> I frutti sono pigne, di forma e dimensione variabile a seconda della specie, che contengono i pinoli. <br><br> I pini sono alberi molto importanti per l'ecosistema, fornendo habitat per la fauna selvatica e contribuendo alla stabilizzazione del terreno. Sono anche ampiamente utilizzati per la produzione di legname, resina e pinoli. Come piante ornamentali, sono apprezzati per la loro forma e la loro resistenza.",
+      "image": "/species/pino.jpg",
+      "raggio": 12
+    },
+    {
+      "Nome": "Sofora del Giappone",
+      "Descrizione": "Styphnolobium japonicum",
+      "Storia": "La sofora del Giappone è una latifoglia caducifoglia originaria della Cina e della Corea, ma ampiamente coltivata in Giappone, da cui prende il nome. È un albero di grandi dimensioni che può raggiungere i 20-25 metri di altezza e ha una chioma ampia e arrotondata. <br><br> Le foglie sono composte, pennate, formate da piccole foglioline ovali di colore verde scuro. <br><br> La fioritura avviene in estate, con grandi grappoli pendenti di fiori bianco-crema, molto profumati, che attraggono insetti impollinatori. <br><br> Il frutto è un legume carnoso, pendente, di colore giallo-verde, che persiste sulla pianta anche in inverno. <br><br> La corteccia è grigio-brunastra e fessurata longitudinalmente. <br><br> La sofora del Giappone è un albero ornamentale molto apprezzato per la sua resistenza all'inquinamento, la sua fioritura tardiva e la sua capacità di fornire ombra, ed è spesso utilizzato in viali e parchi.",
+      "image": "/species/sofora-giappone.jpg",
+      "raggio": 15
+    },
+    {
+      "Nome": "Tamerice",
+      "Descrizione": "Descrizione non disponibile.",
+      "Storia": "Storia non disponibile.",
+      "image": "",
+      "raggio": 0
+    },
+    {
+      "Nome": "Tasso",
+      "Descrizione": "Taxus baccata",
+      "Storia": "Il tasso è una conifera sempreverde originaria dell’Europa, del Nord Africa e dell’Asia occidentale, un tempo molto diffusa in boschi e foreste. È un albero longevo e a crescita lenta che può raggiungere i 15-20 metri di altezza e ha una chioma densa e irregolare. <br><br> Le foglie, o aghi, sono appiattiti, di colore verde scuro e lucidi, disposti a spirale sui rami, ma disposti in due file sui rami laterali. <br><br> La corteccia è sottile, rossastra e si sfalda in piccole placche. <br><br> Il frutto è un arillo carnoso e rosso, che avvolge parzialmente il seme. È l'unica parte non tossica della pianta. L'albero è infatti noto per la sua tossicità, dovuta alla presenza di alcaloidi tossici in tutte le sue parti (tranne l'arillo). <br><br> Il tasso è spesso utilizzato in giardini e cimiteri (da cui il nome comune inglese 'yew' associato ai cimiteri) per la sua bellezza, la sua longevità e la sua tolleranza all'ombra e alla potatura, che lo rende adatto per l'arte topiaria. Il suo legno, duro ed elastico, era utilizzato per la costruzione di archi.",
+      "image": "/species/tasso.jpg",
+      "raggio": 12
+    },
+    {
+      "Nome": "Tiglio",
+      "Descrizione": "Tilia",
+      "Storia": "Il tiglio è una latifoglia caducifoglia, diffusa in diverse specie in Europa e in Asia, in Italia presente in boschi misti. È un albero di grandi dimensioni, longevo, che può raggiungere i 30 metri di altezza e ha una chioma ampia e arrotondata. <br><br> Le foglie sono grandi, cuoriformi, seghettate e di colore verde chiaro. <br><br> La fioritura avviene in estate, con piccoli fiori giallastri, molto profumati, riuniti in cime pendenti, attaccate a una brattea membranosa che funge da ala per la dispersione del frutto. I fiori sono molto apprezzati in erboristeria per le loro proprietà calmanti e in apicoltura per la produzione di miele. <br><br> La corteccia è inizialmente liscia e grigia, poi si fessura longitudinalmente. <br><br> Il tiglio è un albero ornamentale molto amato per la sua ombra, il profumo dei suoi fiori e la sua bellezza, ed è spesso utilizzato in viali, parchi e piazze come albero da ombra.",
+      "image": "/species/tiglio.jpg",
+      "raggio": 10
+    },
+    {
+      "Nome": "Tuia",
+      "Descrizione": "Thuja occidentalis",
+      "Storia": "La Tuia Occidentale, nota anche come Cedro Bianco Americano, è una conifera sempreverde originaria del Nord America, ampiamente utilizzata come pianta ornamentale e da siepe in Europa. È un albero di medie dimensioni che può raggiungere i 15-20 metri di altezza e ha una chioma conica o piramidale. <br><br> Le foglie sono piccole, squamiformi e appiattite, di colore verde brillante o verde scuro. Hanno un odore aromatico quando vengono schiacciate. <br><br> I frutti sono piccole pigne ovali, di colore verde che diventano marroni a maturità. <br><br> La corteccia è sottile, rossastra e si sfalda in lunghe strisce. <br><br> La Tuia è una pianta molto resistente, che si adatta a diversi tipi di terreno e clima, ed è ampiamente utilizzata per siepi, bordure e come pianta singola in giardini e parchi. Il suo legno, leggero e resistente alla putrefazione, è utilizzato per la costruzione di mobili e per rivestimenti esterni.",
+      "image": "/species/tuia.jpg",
+      "raggio": 10
+    }
+  ],
+  "features": [
     {
       "type": "Feature",
       "properties": {
@@ -190,7 +176,8 @@
           45.2290508046706
         ],
         "type": "Point"
-      }
+      },
+      "id": 0
     },
     {
       "type": "Feature",
@@ -228,22 +215,8 @@
       },
       "geometry": {
         "coordinates": [
-          11.6571,
-          45.22959845893837
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Olivo",
-        "ID": 6
-      },
-      "geometry": {
-        "coordinates": [
-          11.657397489916356,
-          45.23043674504213
+          11.657040373042022,
+          45.22958306138304
         ],
         "type": "Point"
       }
@@ -258,6 +231,277 @@
         "coordinates": [
           11.657749487326571,
           45.229242510052686
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Tiglio",
+        "ID": 14
+      },
+      "geometry": {
+        "coordinates": [
+          11.6587472,
+          45.2300664
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Tiglio",
+        "ID": 15
+      },
+      "geometry": {
+        "coordinates": [
+          11.658093553283585,
+          45.22943122988875
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Acero Campestre",
+        "ID": 16
+      },
+      "geometry": {
+        "coordinates": [
+          11.657763345658111,
+          45.22956555171345
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Albero di Giuda",
+        "ID": 17
+      },
+      "geometry": {
+        "coordinates": [
+          11.658536857266682,
+          45.23004635492498
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Bosso Comune",
+        "ID": 18
+      },
+      "geometry": {
+        "coordinates": [
+          11.658013742400698,
+          45.22938768686595
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Evonimo",
+        "ID": 20
+      },
+      "geometry": {
+        "coordinates": [
+          11.658335279964632,
+          45.228859354644186
+        ],
+        "type": "Point"
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Tasso",
+        "ID": 21
+      },
+      "geometry": {
+        "coordinates": [
+          11.6585517,
+          45.229938
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Tasso",
+        "ID": 22
+      },
+      "geometry": {
+        "coordinates": [
+          11.6584444,
+          45.229878
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Carpino Bianco",
+        "ID": 26
+      },
+      "geometry": {
+        "coordinates": [
+          11.6578446,
+          45.2295037
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Pino",
+        "ID": 28
+      },
+      "geometry": {
+        "coordinates": [
+          11.65819160610529,
+          45.22973539499636
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Mirabolano var. Pissardii",
+        "ID": 31
+      },
+      "geometry": {
+        "coordinates": [
+          11.65774562183138,
+          45.22943305491355
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Bagolaro",
+        "ID": 34
+      },
+      "geometry": {
+        "coordinates": [
+          11.6580897,
+          45.2287628
+        ],
+        "type": "Point"
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Bagolaro",
+        "ID": 35
+      },
+      "geometry": {
+        "coordinates": [
+          11.6586805,
+          45.2299396
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Tuia",
+        "ID": 36
+      },
+      "geometry": {
+        "coordinates": [
+          11.6578879,
+          45.2295623
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Tamerice",
+        "ID": 37
+      },
+      "geometry": {
+        "coordinates": [
+          11.6581762,
+          45.2297278
+        ],
+        "type": "Point"
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Nespolo del Giappone",
+        "ID": 38
+      },
+      "geometry": {
+        "coordinates": [
+          11.6587955,
+          45.2299769
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Cipresso dell'Arizona",
+        "ID": 39
+      },
+      "geometry": {
+        "coordinates": [
+          11.6576327,
+          45.2287186
+        ],
+        "type": "Point"
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Magnolia di Soulange",
+        "ID": 1
+      },
+      "geometry": {
+        "coordinates": [
+          11.658108724422215,
+          45.22920565072023
+        ],
+        "type": "Point"
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Olivo",
+        "ID": 6
+      },
+      "geometry": {
+        "coordinates": [
+          11.657397489916356,
+          45.23043674504213
         ],
         "type": "Point"
       }
@@ -349,76 +593,6 @@
     {
       "type": "Feature",
       "properties": {
-        "Nome": "Tiglio",
-        "ID": 14
-      },
-      "geometry": {
-        "coordinates": [
-          11.6587472,
-          45.2300664
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Tiglio",
-        "ID": 15
-      },
-      "geometry": {
-        "coordinates": [
-          11.658093553283585,
-          45.22943122988875
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Acero Campestre",
-        "ID": 16
-      },
-      "geometry": {
-        "coordinates": [
-          11.657763345658111,
-          45.22956555171345
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Albero di Giuda",
-        "ID": 17
-      },
-      "geometry": {
-        "coordinates": [
-          11.658536857266682,
-          45.23004635492498
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Bosso Comune",
-        "ID": 18
-      },
-      "geometry": {
-        "coordinates": [
-          11.658013742400698,
-          45.22938768686595
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "Nome": "Glicine",
         "ID": 19
       },
@@ -426,48 +600,6 @@
         "coordinates": [
           11.657527259389871,
           45.228747379781794
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Evonimo",
-        "ID": 20
-      },
-      "geometry": {
-        "coordinates": [
-          11.658335279964632,
-          45.228859354644186
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Tasso",
-        "ID": 21
-      },
-      "geometry": {
-        "coordinates": [
-          11.6585517,
-          45.229938
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Tasso",
-        "ID": 22
-      },
-      "geometry": {
-        "coordinates": [
-          11.6584444,
-          45.229878
         ],
         "type": "Point"
       }
@@ -517,20 +649,6 @@
     {
       "type": "Feature",
       "properties": {
-        "Nome": "Carpino Bianco",
-        "ID": 26
-      },
-      "geometry": {
-        "coordinates": [
-          11.6578446,
-          45.2295037
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "Nome": "Pino",
         "ID": 27
       },
@@ -538,20 +656,6 @@
         "coordinates": [
           11.658152093431834,
           45.22959325002208
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Pino",
-        "ID": 28
-      },
-      "geometry": {
-        "coordinates": [
-          11.65819160610529,
-          45.22973539499636
         ],
         "type": "Point"
       }
@@ -588,20 +692,6 @@
       "type": "Feature",
       "properties": {
         "Nome": "Mirabolano var. Pissardii",
-        "ID": 31
-      },
-      "geometry": {
-        "coordinates": [
-          11.65774562183138,
-          45.22943305491355
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Mirabolano var. Pissardii",
         "ID": 32
       },
       "geometry": {
@@ -625,6 +715,51 @@
         ],
         "type": "Point"
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Cedro dell'Himalaya",
+        "ID": 40
+      },
+      "geometry": {
+        "coordinates": [
+          11.65780570185757,
+          45.22904205453088
+        ],
+        "type": "Point"
+      },
+      "id": 39
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Magnolia Sempreverde",
+        "ID": 41
+      },
+      "geometry": {
+        "coordinates": [
+          11.658085948557073,
+          45.22888107828905
+        ],
+        "type": "Point"
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nome": "Magnolia Sempreverde",
+        "ID": 41
+      },
+      "geometry": {
+        "coordinates": [
+          11.6574062012443,
+          45.229396200657305
+        ],
+        "type": "Point"
+      },
+      "id": 41
     }
   ]
-    }
+}
