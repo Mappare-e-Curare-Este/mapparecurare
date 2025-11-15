@@ -337,7 +337,7 @@ function addEntranceMarkers(map) {
       const latlng = [feature.geometry.coordinates[1], feature.geometry.coordinates[0]];
       const treeName = feature.properties.Nome;
       const speciesDetails = speciesLookup.get(treeName);
-      const radiusAtZoom18 = (speciesDetails && speciesDetails.raggio) ? speciesDetails.raggio : 8;
+      const radiusAtZoom18 = (feature.properties.raggio) ? feature.properties.raggio : 8;
 
       const popupContent = `
         <div class="tree-popup">
@@ -747,3 +747,4 @@ window.onpopstate = () => {
     }
 };
 })();
+
