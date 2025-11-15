@@ -253,6 +253,11 @@ html, body {
   background-color: #255c19;
 }
 
+.menu-spacer {
+  height: 80px;
+  min-height: 80px;
+}
+
 /* --- Overlay di Conferma Uscita --- */
 #exitPrompt {
   position: fixed;
@@ -282,3 +287,4 @@ html, body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   animation: fadeIn 0.3s ease-out;
 }
+
