@@ -1,0 +1,80 @@
+/*
+    Project Description
+*/
+
+div#projectIntro {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-top: 2em;
+}
+
+div#descDiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    width: 80vw;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--title-color);
+    border-top: 0.2em solid var(--h1-border-color);
+    padding-top: 0.5em;
+}
+
+h2::before {
+    display: inline;
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url("../images/mappare_curare_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+div#descDiv p {
+    text-align: justify;
+}
+
+a#mapLink {
+    position: relative;
+    display: block;
+    max-width: 55vw;
+    color: var(--link-color);
+    background-color: var(--link-bg-color);
+    padding: 2em 0.5em;
+    border-radius: 70px;
+    font-size: 1.2em;
+    text-align: center;
+    z-index: -1;
+}
+
+a#mapLink::after {
+    content: none;
+}
+
+a#mapLink::after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url("../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    bottom: -56%;
+    right: 10%;
+    rotate: 164deg;
+    width: 150px;
+    height: 130px;
+}
+
+/*
+    Project Description
+*/
+
+div#projectDesc p#mapHint {
+    margin-top: 5em;
+}
