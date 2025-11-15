@@ -5,761 +5,886 @@
       "Nome": "Abete Greco",
       "Descrizione": "Abies cephalonica",
       "Storia": "L’abete greco è una conifera sempreverde originaria della Grecia, che cresce spontaneamente nelle regioni montuose della Penisola Balcanica. È un albero longevo che può raggiungere i 30 metri di altezza e ha una chioma di forma conica che si restringe in vetta. <br><br> Le foglie, o aghi, sono corte, rigide e appuntite, di colore verde intenso e lucide. Sono disposte a spirale intorno ai rami, ma si piegano verso l’alto, coprendo il rametto. <br><br> La corteccia è inizialmente liscia e grigio-brunastra, poi si screpola in piccole placche scure. <br><br> L’abete greco è apprezzato come pianta ornamentale per la sua resistenza e la sua capacità di adattarsi a diversi tipi di terreno. Il legno viene utilizzato in falegnameria per la realizzazione di mobili e nell’industria della carta.",
-      "image": "/species/abete-greco.jpg",
-      "raggio": 15
+      "image": [
+      "images/Abete_Greco/Abete_Greco_1_web.jpg",
+      "images/Abete_Greco/Abete_Greco_2_web.jpg",
+      "images/Abete_Greco/Abete_Greco_1_web.jpg"
+      ]
     },
     {
       "Nome": "Acero Campestre",
       "Descrizione": "Acer campestre",
       "Storia": "L’acero campestre è una latifoglia caducifoglia autoctona, diffusa in gran parte dell'Europa centro-meridionale e in Italia, sia in boschi misti che come albero isolato o per formare siepi. È un albero di medie dimensioni che non supera i 15-20 metri di altezza e ha una chioma espansa e globosa. <br><br> Le foglie, piccole e a tre lobi, sono di colore verde scuro e lucide, con una forma caratteristica che ricorda una mano aperta. In autunno assumono una colorazione giallo brillante. <br><br> La corteccia è grigio-brunastra, fessurata longitudinalmente e con il tempo si sfalda in placche rettangolari. <br><br> I fiori sono giallo-verdastri, poco appariscenti, ma sono seguiti da un frutto a doppia samara, dotato di due ali membranose che gli permettono di planare lontano dall’albero madre. <br><br> L’acero campestre è spesso utilizzato per alberature stradali e in parchi e giardini per la sua resistenza e la sua bellezza autunnale. Il legno, duro e compatto, è apprezzato per lavori di falegnameria e scultura.",
-      "image": "/species/acero-campestre.jpg",
-      "raggio": 11
+      "image": "/species/acero-campestre.jpg"
     },
     {
       "Nome": "Albero di Giuda",
       "Descrizione": "Cercis siliquastrum",
       "Storia": "L’albero di Giuda è una latifoglia caducifoglia di origine mediterranea, diffusa in Europa meridionale e in Asia occidentale. È un albero di piccole dimensioni che raramente supera i 10 metri di altezza e ha una chioma espansa e irregolare. <br><br> La sua caratteristica più distintiva è la fioritura precoce, che avviene in primavera, prima della comparsa delle foglie. I fiori, di colore rosa-violaceo intenso, sono raccolti in mazzetti lungo i rami, anche sul tronco (caulifloria). <br><br> Le foglie sono cuoriformi, di colore verde-azzurro, e compaiono dopo la fioritura. <br><br> La corteccia è inizialmente liscia e grigio-brunastra, poi si fessura in piccole placche. <br><br> Il nome comune “Albero di Giuda” deriva da una leggenda secondo cui Giuda Iscariota si sarebbe impiccato a un albero di questa specie dopo aver tradito Gesù Cristo. Per la sua fioritura spettacolare, è molto utilizzato in giardini e viali come albero ornamentale.",
-      "image": "/species/albero-di-giuda.jpg",
-      "raggio": 10
+      "image": "/species/albero-di-giuda.jpg"
     },
     {
       "Nome": "Bagolaro",
-      "Descrizione": "Descrizione non disponibile.",
-      "Storia": "Storia non disponibile.",
-      "image": "",
-      "raggio": 0
+      "Descrizione": "Celtis australis",
+      "Storia": "Il Bagolaro, detto anche Romiglia o Spaccasassi, è una pianta caducifoglia e latifoglia, ovvero caratterizzata da larghe foglie che vengono perse stagionalmente. È un albero longevo che normalmente vive tra i 120 e i 140 anni, ma può arrivare fino a 3-4 secoli.<br><br> Il nome “Spaccasassi” non è un caso, perché le sue radici sono così robuste che durante lo sviluppo riescono a sgretolare completamente anche ostacoli molto resistenti per farsi spazio nel terreno, per questo cresce bene anche in luoghi aridi e sassosi. <br><br> È un albero tenace, che non richiede molta manutenzione purché si trovi in presenza di spazi soleggiati e abbastanza caldi, infatti si sviluppa molto bene su tutta la fascia mediterranea, dall’Europa meridionale all’Africa settentrionale fino al Medio Oriente il che lo rende una pianta autoctona. <br><br> Durante la fioritura in aprile-maggio produce frutti carnosi e dalla buccia sottile che contengono un singolo seme legnoso, chiamati drupe subsferiche. <br> È molto popolare e capita di vederlo al lato delle strade per la sua grande resistenza allo smog urbano. <br> In questo parco sono presenti più di 40 esemplari di Bagolaro, rendendolo la specie più diffusa in tutto il parco.",
+      "image": ""
     },
     {
       "Nome": "Bosso Comune",
       "Descrizione": "Buxus sempervirens",
       "Storia": "Il bosso comune è un arbusto o piccolo albero sempreverde originario dell’Europa, del Nord Africa e dell’Asia occidentale, tipico della macchia mediterranea e dei sottoboschi. È una specie a crescita lenta, molto longeva, che raramente supera i 5 metri di altezza. <br><br> Le foglie sono piccole, ovali, lucide e di colore verde scuro, disposte in modo opposto lungo i rami. Mantengono il loro colore anche durante l’inverno. <br><br> I fiori sono piccoli, insignificanti e di colore giallo-verdastro, ma sono profumati e compaiono in primavera. <br><br> La corteccia è sottile, liscia e grigio-brunastra. <br><br> Il legno, molto duro e compatto, è apprezzato in ebanisteria per lavori di intaglio e tornitura. Il bosso è noto per la sua tolleranza alla potatura, che lo rende uno degli arbusti più utilizzati nell’arte topiaria per creare siepi e figure geometriche.",
-      "image": "/species/bosso-comune.jpg",
-      "raggio": 8
+      "image": "/species/bosso-comune.jpg"
     },
     {
       "Nome": "Carpino Bianco",
       "Descrizione": "Carpinus betulus",
       "Storia": "Il carpino bianco è una latifoglia caducifoglia autoctona, diffusa in gran parte dell'Europa e dell'Asia occidentale, in Italia presente in boschi misti di latifoglie. È un albero di medie dimensioni che può raggiungere i 20-25 metri di altezza e ha una chioma densa e ovoidale. <br><br> Le foglie sono ovali, seghettate, di colore verde scuro e presentano nervature molto marcate. In autunno assumono una colorazione giallo-arancio. <br><br> La corteccia è liscia e grigio-chiara, con caratteristiche venature verticali e sinuose che ricordano la muscolatura del tronco. <br><br> Il frutto è una piccola noce racchiusa in una brattea trilobata, che aiuta la dispersione anemofila. <br><br> Il legno è molto duro e resistente, utilizzato in passato per la costruzione di attrezzi e utensili. È un albero spesso impiegato per siepi e alberature stradali per la sua resistenza alla potatura e la sua capacità di adattarsi a diversi tipi di terreno.",
-      "image": "/species/carpino-bianco.jpg",
-      "raggio": 15
+      "image": "/species/carpino-bianco.jpg"
     },
     {
       "Nome": "Cedro dell'Himalaya",
       "Descrizione": "Cedrus deodara",
       "Storia": "Il cedro dell’Himalaya è una conifera sempreverde originaria dell’Himalaya occidentale (Afghanistan, Pakistan e India), introdotta in Europa a metà dell’Ottocento. È un albero maestoso e longevo che può raggiungere i 60 metri di altezza e ha una chioma conica e ampia. <br><br> Gli aghi, di colore verde-azzurro, sono lunghi, morbidi e riuniti in densi ciuffi. Hanno una disposizione caratteristica, pendula e ricadente, che conferisce alla chioma un aspetto elegante. <br><br> La corteccia è scura, fessurata e rugosa. <br><br> I frutti sono pigne erette, cilindriche e di colore bruno-rossastro. <br><br> Il cedro dell’Himalaya è molto apprezzato come pianta ornamentale per la sua eleganza e la sua maestosità, e si trova spesso in parchi e grandi giardini. In India, il suo legno aromatico è utilizzato per la costruzione di templi e per le sue proprietà insetticide.",
-      "image": "/species/cedro-himalaya.jpg",
-      "raggio": 20
-    },
-    {
-      "Nome": "Cipresso dell'Arizona",
-      "Descrizione": "Descrizione non disponibile.",
-      "Storia": "Storia non disponibile.",
-      "image": "",
-      "raggio": 0
+      "image": "/species/cedro-himalaya.jpg"
     },
     {
       "Nome": "Evonimo",
       "Descrizione": "Euonymus europaeus",
       "Storia": "L’evonimo comune, o berretta del prete, è un arbusto o piccolo albero caducifoglio autoctono, diffuso in Europa e in Asia occidentale, in Italia presente in boschi e siepi. È un arbusto di piccole dimensioni che raramente supera i 6 metri di altezza. <br><br> Le foglie sono ovali, appuntite e di colore verde scuro, che in autunno assumono una vivace colorazione rossa. <br><br> I fiori sono piccoli e insignificanti, di colore giallo-verdastro, ma sono seguiti da frutti molto appariscenti: capsule a quattro lobi di colore rosa-rossastro, che si aprono per rivelare semi arancioni. Questa forma caratteristica ricorda il cappello del prete, da cui il nome comune. <br><br> La corteccia è liscia e grigio-brunastra. <br><br> L’evonimo è spesso utilizzato in giardini e siepi per il suo fogliame autunnale colorato e i suoi frutti ornamentali, sebbene siano tossici per l’uomo. Il legno, duro e compatto, era utilizzato in passato per la realizzazione di fusi per filare.",
-      "image": "/species/evonimo.jpg",
-      "raggio": 8
+      "image": "/species/evonimo.jpg"
     },
     {
       "Nome": "Ginkgo Biloba",
       "Descrizione": "Ginkgo biloba",
       "Storia": "Il ginkgo biloba è una latifoglia caducifoglia originaria della Cina, considerata un fossile vivente, in quanto unica specie sopravvissuta di un ordine di piante esistente 270 milioni di anni fa. È un albero longevo e maestoso che può raggiungere i 30-40 metri di altezza e ha una chioma conica o piramidale. <br><br> Le foglie, uniche tra le latifoglie, hanno una forma a ventaglio, biloba, di colore verde chiaro. In autunno assumono una spettacolare colorazione giallo oro intenso prima di cadere, rendendo l'albero un punto focale in parchi e giardini. <br><br> La corteccia è grigio-brunastra e fessurata longitudinalmente. <br><br> È una specie dioica, con esemplari maschili che producono polline e femminili che producono un frutto carnoso e maleodorante, per questo motivo si preferisce piantare gli esemplari maschili. <br><br> Il ginkgo è noto per la sua resistenza all'inquinamento atmosferico e la sua longevità, ed è ampiamente utilizzato in fitoterapia per le sue proprietà benefiche.",
-      "image": "/species/ginkgo-biloba.jpg",
-      "raggio": 15
+      "image": [
+        "images/Gingko_Biloba/Gingko_Biloba_1_web.jpg",
+        "images/Gingko_Biloba/Gingko_Biloba_2_web.jpg",
+        "images/Gingko_Biloba/Gingko_Biloba_3_web.jpg"
+      ]
     },
     {
       "Nome": "Glicine",
       "Descrizione": "Wisteria sinensis",
       "Storia": "Il glicine è una pianta rampicante legnosa, originaria della Cina, introdotta in Europa all'inizio dell'Ottocento. È una pianta vigorosa e longeva, capace di raggiungere grandi dimensioni e di avvolgersi a sostegni, pergolati e alberi. <br><br> La sua caratteristica più distintiva è la fioritura spettacolare, che avviene in primavera, con lunghi grappoli pendenti di fiori profumatissimi, di colore viola-lilla, rosa o bianco. <br><br> Le foglie sono composte, pennate, formate da piccole foglioline ovali di colore verde brillante. <br><br> Il frutto è un baccello vellutato che contiene semi tossici. <br><br> Il glicine è una delle piante ornamentali più amate per la sua fioritura abbondante e profumata, ed è spesso utilizzato per ricoprire pareti, pergolati e archi in parchi e giardini. La sua crescita vigorosa richiede potature regolari per mantenerne la forma e favorire la fioritura.",
-      "image": "/species/glicine.jpg",
-      "raggio": 8
+      "image": "/species/glicine.jpg"
     },
     {
       "Nome": "Ippocastano",
       "Descrizione": "Aesculus hippocastanum",
       "Storia": "L’ippocastano è una latifoglia caducifoglia molto diffusa in parchi, viali e giardini, apprezzata per la sua imponenza ornamentale. In natura è originario di una ristretta area dei Balcani settentrionali, ma è stato introdotto e coltivato in gran parte d’Europa, dove si è naturalizzato, soprattutto in zone collinari e montane. Può raggiungere i 30 metri di altezza ed è considerato una delle più maestose tra le specie ornamentali coltivate.<br><br> Le foglie sono composte e palmate, formate da 5–7 foglioline obovate disposte a raggiera, lunghe fino a 20–25 cm. Sono verde brillante sulla pagina superiore, più chiare e leggermente tomentose su quella inferiore. I giovani rami sono robusti e portano gemme molto grandi, ricoperte da una resina vischiosa. <br><br> La corteccia è inizialmente liscia e grigio-brunastra, ma con l’età tende a screpolarsi in placche irregolari, assumendo tonalità più scure e un aspetto fessurato. <br><br> Il nome del genere Aesculus era usato già dai Romani per alcune querce, mentre l’epiteto specifico hippocastanum deriva dal greco e significa “castagna del cavallo”, poiché in passato i semi venivano somministrati agli equini per alleviare disturbi respiratori. Questi semi, o castagne matte, sono leggermente tossici per l’uomo, ma trovano impiego in fitoterapia.",
-      "image": "/species/ippocastano.jpg",
-      "raggio": 20
+      "image": "/species/ippocastano.jpg"
     },
     {
       "Nome": "Magnolia Sempreverde",
-      "Descrizione": "Descrizione non disponibile.",
-      "Storia": "Storia non disponibile.",
-      "image": "",
-      "raggio": 10
+      "Descrizione": "Magnolia grandiflora",
+      "Storia": "La magnolia sempreverde è un albero latifoglia e sempreverde, ovvero caratterizzato dalle foglie larghe e che rimangono verdi tutto l’anno, la varietà grandiflora è originaria del sud-est degli Stati Uniti d’America. <br><br> Albero longevo, che può raggiungere i 25-30 metri di altezza e vivere per più secoli, la magnolia è diffusa sia nel continente americano centrale e settentrionale, che nell’Asia orientale; questa sua diffusione, mista al fatto che le Magnoliacee sono una famiglia antica (sono stati trovati resti di magnolie risalenti a 20 milioni di anni fa), rende le sue varietà anche molto diverse tra loro. <br><br> Le foglie sono lunghe fino a 20-30 cm, lucide e coriacee, con una parte inferiore leggermente pelosa, hanno una durata di circa 2 anni, dopo i quali cadono e si rinnovano. <br> La Magnolia grandiflora entra in Europa intorno al XVII secolo, popolare nei giardini aristocratici per i suoi grandi fiori bianchi e profumati che fioriscono a maggio e per le foglie dal verde intenso.",
+      "image": ""
     },
     {
       "Nome": "Magnolia di Soulange",
-      "Descrizione": "Magnolia soulangiana",
+      "Descrizione": "Magnolia soulangeana",
       "Storia": "La magnolia di Soulange è un ibrido ottenuto dall’incrocio tra la magnolia denudata e la magnolia liliflora, creata in Francia nel 1820 da Étienne Soulange-Bodin. È un arbusto o piccolo albero a foglia caduca, che raggiunge i 6-8 metri di altezza e ha una chioma arrotondata. <br><br> La sua caratteristica principale è la fioritura precoce e abbondante, che avviene in primavera prima della comparsa delle foglie. I fiori, grandi e a forma di coppa, sono di colore bianco e rosa, con sfumature più intense alla base. <br><br> Le foglie sono grandi, ovali e di colore verde chiaro. <br><br> La corteccia è liscia e grigio-brunastra. <br><br> La magnolia di Soulange è una delle magnolie ornamentali più apprezzate per la sua fioritura spettacolare e la sua resistenza al freddo, ed è spesso utilizzata come pianta singola in giardini e parchi.",
-      "image": "/species/magnolia-soulange.jpg",
-      "raggio": 10
+      "image": "/species/magnolia-soulange.jpg"
     },
     {
-      "Nome": "Mirabolano var. Pissardii",
+      "Nome": "Mirabolano rosso",
       "Descrizione": "Prunus cerasifera 'Pissardii'",
-      "Storia": "Il Mirabolano, o Prunus cerasifera, è un albero da frutto originario dell'Asia occidentale e dell'Europa orientale, spesso coltivato per i suoi frutti (le prugne mirabolane) o utilizzato come portainnesto. La varietà 'Pissardii' è una cultivar ornamentale molto diffusa, apprezzata per il suo colore rosso-violaceo del fogliame e dei rami. <br><br> È un albero di medie dimensioni che può raggiungere i 10 metri di altezza e ha una chioma arrotondata. <br><br> Le foglie sono ovali, seghettate, di un caratteristico colore rosso-violaceo che mantiene per tutta la stagione vegetativa. <br><br> La fioritura è precoce, in primavera, con fiori rosa pallido o bianchi che compaiono prima delle foglie. <br><br> Il frutto è una piccola prugna commestibile, di colore rosso-violaceo. <br><br> Il Mirabolano 'Pissardii' è spesso utilizzato in parchi e viali per il suo valore ornamentale, in particolare per il contrasto cromatico del suo fogliame con il verde circostante. È una pianta rustica e resistente, che si adatta a diversi tipi di terreno.",
-      "image": "/species/mirabolano.jpg",
-      "raggio": 10
+      "Storia": "Il Prunus Pissardii, detto Mirabolano rosso è anche noto erroneamente come ciliegio da fiore, pur essendo una varietà di susino derivata dal Prunus cerasifera. <br><br> Originario degli Stati Uniti è stato introdotto in parchi e giardini privati ad inizio del XIX secolo per il suo fogliame colorato e per la sua fioritura spettacolare. Le foglie di questa varietà sono infatti di un rosso acceso durante tutta la stagione vegetativa, mentre i fiori sono di un tenue rosa tendente al bianco, colori che lo fanno spiccare in qualsiasi ambiente. <br><br> Sebbene i frutti che assomigliano alle ciliegie siano commestibili, sono meno apprezzati di altre varietà di susino; la varietà Pissardii è più ricercata per le sue caratteristiche ornamentali. Infatti la fioritura che avviene precocemente intorno a febbraio-marzo lo rende uno dei primi alberi a sbocciare in primavera con fiori che sbocciano prima ancora della comparsa delle foglie. <br><br> Coltivato come arbusto o piccolo albero, si presta bene alla coltivazione in giardini, parchi e viali urbani, adattandosi a diversi tipi di suolo e resistendo bene anche all’inquinamento urbano.",
+      "image": "/species/mirabolano.jpg"
     },
     {
       "Nome": "Nespolo del Giappone",
-      "Descrizione": "Descrizione non disponibile.",
-      "Storia": "Storia non disponibile.",
-      "image": "",
-      "raggio": 0
+      "Descrizione": "Eriobotrya japonica",
+      "Storia": "Il nespolo del Giappone è una pianta latifoglia e sempreverde, ovvero dalle grandi foglie che rimangono verdi durante tutte le stagioni. <br><br>Nonostante il nome suggerisca la provenienza dal Giappone, questo nespolo sembra originare dalla Cina, arriva però in Europa tramite la terra del sol levante, dove è stato ampiamente coltivato in epoca precedente ai contatti con l’occidente. <br><br>I caratteristici frutti a polpa acquosa si devono infatti alla selezione avvenuta in Giappone, questi ultimi si sviluppano durante il periodo di primaverile, anticipatamente ad altre piante da frutto, mentre ha una fioritura autunnale, che lo rende più sensibile ai climi freddi che possono danneggiare i frutticini in via di crescita; questa sua fioritura tardiva però è molto gradita dalle api, che in mancanza di molte altre piante fanno incetta del suo nettare. <br><br>Il clima ideale per la produzione di frutti è quindi mite, però la pianta è gradita anche per le sue caratteristiche ornamentali che la rendono una presenza gradita anche in giardini come questo",
+      "image": ""
     },
     {
       "Nome": "Olivo",
       "Descrizione": "Olea europaea",
       "Storia": "L’olivo è un albero sempreverde originario dell’Asia Minore e del Vicino Oriente, diffuso in tutta l’area mediterranea. È una pianta longeva e resistente, simbolo di pace e longevità, che può raggiungere i 10-15 metri di altezza. <br><br> Le foglie sono coriacee, lanceolate, di colore verde scuro sulla pagina superiore e argentee su quella inferiore. Questa bicromia è una caratteristica distintiva dell'olivo. <br><br> La corteccia è grigio-chiara, liscia quando la pianta è giovane, poi si fessura e diventa nodosa e contorta con l’età. <br><br> I fiori sono piccoli, bianchi e profumati, riuniti in grappoli. Il frutto, l’oliva, è una drupa carnosa di colore verde che diventa nero-violaceo a maturazione. <br><br> L’olivo è una pianta di fondamentale importanza economica per la produzione di olio e olive da tavola, ed è anche molto apprezzato come pianta ornamentale per la sua bellezza e la sua simbologia.",
-      "image": "/species/olivo.jpg",
-      "raggio": 12
+      "image": "/species/olivo.jpg"
     },
     {
       "Nome": "Pino",
       "Descrizione": "Pinus",
       "Storia": "Il pino è una conifera sempreverde, diffusa in molte aree del mondo, in Italia presente in diverse specie, tra cui il pino domestico (Pinus pinea) e il pino marittimo (Pinus pinaster). È un albero longevo che può raggiungere i 30-40 metri di altezza. <br><br> Le foglie, o aghi, sono lunghe e sottili, riunite in fascetti di due, tre o cinque, a seconda della specie. <br><br> La corteccia è spessa, scura e fessurata, con caratteristiche placche rettangolari. <br><br> I frutti sono pigne, di forma e dimensione variabile a seconda della specie, che contengono i pinoli. <br><br> I pini sono alberi molto importanti per l'ecosistema, fornendo habitat per la fauna selvatica e contribuendo alla stabilizzazione del terreno. Sono anche ampiamente utilizzati per la produzione di legname, resina e pinoli. Come piante ornamentali, sono apprezzati per la loro forma e la loro resistenza.",
-      "image": "/species/pino.jpg",
-      "raggio": 12
+      "image": "/species/pino.jpg"
     },
     {
       "Nome": "Sofora del Giappone",
       "Descrizione": "Styphnolobium japonicum",
       "Storia": "La sofora del Giappone è una latifoglia caducifoglia originaria della Cina e della Corea, ma ampiamente coltivata in Giappone, da cui prende il nome. È un albero di grandi dimensioni che può raggiungere i 20-25 metri di altezza e ha una chioma ampia e arrotondata. <br><br> Le foglie sono composte, pennate, formate da piccole foglioline ovali di colore verde scuro. <br><br> La fioritura avviene in estate, con grandi grappoli pendenti di fiori bianco-crema, molto profumati, che attraggono insetti impollinatori. <br><br> Il frutto è un legume carnoso, pendente, di colore giallo-verde, che persiste sulla pianta anche in inverno. <br><br> La corteccia è grigio-brunastra e fessurata longitudinalmente. <br><br> La sofora del Giappone è un albero ornamentale molto apprezzato per la sua resistenza all'inquinamento, la sua fioritura tardiva e la sua capacità di fornire ombra, ed è spesso utilizzato in viali e parchi.",
-      "image": "/species/sofora-giappone.jpg",
-      "raggio": 15
+      "image": [
+        "images/Sofora/Sofora_1_web.jpg",
+        "images/Sofora/Sofora_2_web.jpg",
+        "images/Sofora/Sofora_3_web.jpg"
+    ]
     },
     {
       "Nome": "Tamerice",
-      "Descrizione": "Descrizione non disponibile.",
+      "Descrizione": "Tamarix gallica",
       "Storia": "Storia non disponibile.",
-      "image": "",
-      "raggio": 0
+      "image": ""
     },
     {
       "Nome": "Tasso",
       "Descrizione": "Taxus baccata",
       "Storia": "Il tasso è una conifera sempreverde originaria dell’Europa, del Nord Africa e dell’Asia occidentale, un tempo molto diffusa in boschi e foreste. È un albero longevo e a crescita lenta che può raggiungere i 15-20 metri di altezza e ha una chioma densa e irregolare. <br><br> Le foglie, o aghi, sono appiattiti, di colore verde scuro e lucidi, disposti a spirale sui rami, ma disposti in due file sui rami laterali. <br><br> La corteccia è sottile, rossastra e si sfalda in piccole placche. <br><br> Il frutto è un arillo carnoso e rosso, che avvolge parzialmente il seme. È l'unica parte non tossica della pianta. L'albero è infatti noto per la sua tossicità, dovuta alla presenza di alcaloidi tossici in tutte le sue parti (tranne l'arillo). <br><br> Il tasso è spesso utilizzato in giardini e cimiteri (da cui il nome comune inglese 'yew' associato ai cimiteri) per la sua bellezza, la sua longevità e la sua tolleranza all'ombra e alla potatura, che lo rende adatto per l'arte topiaria. Il suo legno, duro ed elastico, era utilizzato per la costruzione di archi.",
-      "image": "/species/tasso.jpg",
-      "raggio": 12
+      "image": [
+        "images/Tasso/Tasso_1_web.jpg",
+        "images/Tasso/Tasso_2_web.jpg",
+        "images/Tasso/Tasso_3_web.jpg"
+    ]
     },
     {
       "Nome": "Tiglio",
-      "Descrizione": "Tilia",
+      "Descrizione": "Tilia americana",
       "Storia": "Il tiglio è una latifoglia caducifoglia, diffusa in diverse specie in Europa e in Asia, in Italia presente in boschi misti. È un albero di grandi dimensioni, longevo, che può raggiungere i 30 metri di altezza e ha una chioma ampia e arrotondata. <br><br> Le foglie sono grandi, cuoriformi, seghettate e di colore verde chiaro. <br><br> La fioritura avviene in estate, con piccoli fiori giallastri, molto profumati, riuniti in cime pendenti, attaccate a una brattea membranosa che funge da ala per la dispersione del frutto. I fiori sono molto apprezzati in erboristeria per le loro proprietà calmanti e in apicoltura per la produzione di miele. <br><br> La corteccia è inizialmente liscia e grigia, poi si fessura longitudinalmente. <br><br> Il tiglio è un albero ornamentale molto amato per la sua ombra, il profumo dei suoi fiori e la sua bellezza, ed è spesso utilizzato in viali, parchi e piazze come albero da ombra.",
-      "image": "/species/tiglio.jpg",
-      "raggio": 10
+      "image": "/species/tiglio.jpg"
     },
     {
       "Nome": "Tuia",
       "Descrizione": "Thuja occidentalis",
       "Storia": "La Tuia Occidentale, nota anche come Cedro Bianco Americano, è una conifera sempreverde originaria del Nord America, ampiamente utilizzata come pianta ornamentale e da siepe in Europa. È un albero di medie dimensioni che può raggiungere i 15-20 metri di altezza e ha una chioma conica o piramidale. <br><br> Le foglie sono piccole, squamiformi e appiattite, di colore verde brillante o verde scuro. Hanno un odore aromatico quando vengono schiacciate. <br><br> I frutti sono piccole pigne ovali, di colore verde che diventano marroni a maturità. <br><br> La corteccia è sottile, rossastra e si sfalda in lunghe strisce. <br><br> La Tuia è una pianta molto resistente, che si adatta a diversi tipi di terreno e clima, ed è ampiamente utilizzata per siepi, bordure e come pianta singola in giardini e parchi. Il suo legno, leggero e resistente alla putrefazione, è utilizzato per la costruzione di mobili e per rivestimenti esterni.",
-      "image": "/species/tuia.jpg",
-      "raggio": 10
+      "image": "/species/tuia.jpg"
     }
   ],
-  "features": [
+"features": [
     {
       "type": "Feature",
       "properties": {
-        "Nome": "Cedro dell'Himalaya",
-        "ID": 2
+        "ID": 1,
+        "Nome": "Abete Greco",
+        "raggio": 11
       },
       "geometry": {
+        "type": "Point",
         "coordinates": [
-          11.65834774717929,
-          45.2290508046706
-        ],
-        "type": "Point"
-      },
-      "id": 0
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Cedro dell'Himalaya",
-        "ID": 3
-      },
-      "geometry": {
-        "coordinates": [
-          11.6583398,
-          45.2296938
-        ],
-        "type": "Point"
+          11.657404803991252,
+          45.229997972690335
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "Nome": "Cedro dell'Himalaya",
-        "ID": 4
-      },
-      "geometry": {
-        "coordinates": [
-          11.65789551877872,
-          45.22974744502528
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Sofora del Giappone",
-        "ID": 5
-      },
-      "geometry": {
-        "coordinates": [
-          11.657040373042022,
-          45.22958306138304
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Tiglio",
-        "ID": 7
-      },
-      "geometry": {
-        "coordinates": [
-          11.657749487326571,
-          45.229242510052686
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Tiglio",
-        "ID": 14
-      },
-      "geometry": {
-        "coordinates": [
-          11.6587472,
-          45.2300664
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Tiglio",
-        "ID": 15
-      },
-      "geometry": {
-        "coordinates": [
-          11.658093553283585,
-          45.22943122988875
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
+        "ID": 2,
         "Nome": "Acero Campestre",
-        "ID": 16
+        "raggio": 10
       },
       "geometry": {
+        "type": "Point",
         "coordinates": [
-          11.657763345658111,
-          45.22956555171345
-        ],
-        "type": "Point"
+          11.65776345,
+          45.22956556
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
+        "ID": 3,
         "Nome": "Albero di Giuda",
-        "ID": 17
+        "raggio": 8
       },
       "geometry": {
+        "type": "Point",
         "coordinates": [
-          11.658536857266682,
-          45.23004635492498
-        ],
-        "type": "Point"
+          11.65853686,
+          45.23004638
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
+        "ID": 4,
+        "Nome": "Bagolaro",
+        "raggio": 9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.658131362377583,
+          45.22873541423229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 5,
+        "Nome": "Bagolaro",
+        "raggio": 10
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.658792576006984,
+          45.22993711978396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 6,
+        "Nome": "Bagolaro",
+        "raggio": 11
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.657782182016115,
+          45.22991418124463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 7,
+        "Nome": "Bagolaro",
+        "raggio":10
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65838257,
+          45.23022317351
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 8,
         "Nome": "Bosso Comune",
-        "ID": 18
+        "raggio": 8
       },
       "geometry": {
+        "type": "Point",
         "coordinates": [
-          11.658013742400698,
-          45.22938768686595
-        ],
-        "type": "Point"
+          11.65801374,
+          45.22938769
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "Nome": "Evonimo",
-        "ID": 20
+        "ID": 9,
+        "Nome": "Carpino Bianco",
+        "raggio": 8
       },
       "geometry": {
+        "type": "Point",
         "coordinates": [
-          11.658335279964632,
-          45.228859354644186
-        ],
-        "type": "Point"
-      },
-      "id": 10
+          11.6577947,
+          45.22863803
+        ]
+      }
     },
     {
       "type": "Feature",
       "properties": {
-        "Nome": "Tasso",
-        "ID": 21
+        "ID": 10,
+        "Nome": "Carpino Bianco",
+        "raggio": 8
       },
       "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.657886466976716,
+          45.22940901896862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 11,
+        "Nome": "Cedro dell'Himalaya",
+        "raggio": 11
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65834775,
+          45.2290508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 12,
+        "Nome": "Cedro dell'Himalaya",
+        "raggio": 20
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.658389794852816,
+          45.22966641467746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 13,
+        "Nome": "Cedro dell'Himalaya",
+        "raggio": 12
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65789552,
+          45.22974745
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 14,
+        "Nome": "Cedro dell'Himalaya",
+        "raggio": 17
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65826991064273,
+          45.22999553565686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 15,
+        "Nome": "Cedro dell'Himalaya",
+        "raggio": 17
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.657849674237742,
+          45.229019682822205
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 16,
+        "Nome": "Cedro dell'Himalaya",
+        "raggio": 14
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.657614871978756,
+          45.23014808363275
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 17,
+        "Nome": "Evonimo",
+        "raggio": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65833528,
+          45.22885935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 18,
+        "Nome": "Ginkgo Biloba",
+        "raggio": 13
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.657016786996408,
+          45.23029235662194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 19,
+        "Nome": "Ginkgo Biloba",
+        "raggio": 13
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.6571991099067,
+          45.229718585120146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 20,
+        "Nome": "Glicine",
+        "raggio": 9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65752726,
+          45.22874738
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 21,
+        "Nome": "Ippocastano",
+        "raggio": 11
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65689753,
+          45.23013425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 22,
+        "Nome": "Magnolia di Soulange",
+        "raggio": 16
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.658137643577332,
+          45.22919750111724
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 23,
+        "Nome": "Magnolia Sempreverde",
+        "raggio": 20
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.658111993151678,
+          45.22887088948092
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 24,
+        "Nome": "Magnolia Sempreverde",
+        "raggio": 15
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.657457632782926,
+          45.229392099331676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 25,
+        "Nome": "Mirabolano rosso",
+        "raggio": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.657800247528392,
+          45.22942856207415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 26,
+        "Nome": "Mirabolano rosso",
+        "raggio": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65769677569474,
+          45.22942852659178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 27,
+        "Nome": "Mirabolano rosso",
+        "raggio": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65764698294551,
+          45.22943033488979
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 28,
+        "Nome": "Mirabolano rosso",
+        "raggio": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.657746623584714,
+          45.229428930369856
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 29,
+        "Nome": "Nespolo del Giappone",
+        "raggio": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.658867324043658,
+          45.22997285335961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 30,
+        "Nome": "Olivo",
+        "raggio": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.6574319040862,
+          45.230425439693796
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 31,
+        "Nome": "Pino",
+        "raggio": 11
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.658192306600837,
+          45.229583133935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 32,
+        "Nome": "Pino",
+        "raggio": 11
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65820843044462,
+          45.229758892724
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 33,
+        "Nome": "Sofora del Giappone",
+        "raggio": 10
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.657020275468252,
+          45.229520342419015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 34,
+        "Nome": "Sofora del Giappone",
+        "raggio": 11
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65779579,
+          45.2302509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 35,
+        "Nome": "Tamerice",
+        "raggio": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.658258904057007,
+          45.229789471831076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 36,
+        "Nome": "Tasso",
+        "raggio": 9
+      },
+      "geometry": {
+        "type": "Point",
         "coordinates": [
           11.6585517,
           45.229938
-        ],
-        "type": "Point"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
+        "ID": 37,
         "Nome": "Tasso",
-        "ID": 22
+        "raggio": 9
       },
       "geometry": {
+        "type": "Point",
         "coordinates": [
           11.6584444,
           45.229878
-        ],
-        "type": "Point"
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "Nome": "Carpino Bianco",
-        "ID": 26
+        "ID": 38,
+        "Nome": "Tasso",
+        "raggio": 12
       },
       "geometry": {
+        "type": "Point",
         "coordinates": [
-          11.6578446,
-          45.2295037
-        ],
-        "type": "Point"
+          11.656986957520763,
+          45.2298893061841
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "Nome": "Pino",
-        "ID": 28
+        "ID": 39,
+        "Nome": "Tiglio",
+        "raggio": 13
       },
       "geometry": {
+        "type": "Point",
         "coordinates": [
-          11.65819160610529,
-          45.22973539499636
-        ],
-        "type": "Point"
+          11.65774949,
+          45.22924251
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "Nome": "Mirabolano var. Pissardii",
-        "ID": 31
+        "ID": 40,
+        "Nome": "Tiglio",
+        "raggio": 13
       },
       "geometry": {
+        "type": "Point",
         "coordinates": [
-          11.65774562183138,
-          45.22943305491355
-        ],
-        "type": "Point"
+          11.65766322,
+          45.22918951
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "Nome": "Bagolaro",
-        "ID": 34
+        "ID": 41,
+        "Nome": "Tiglio",
+        "raggio": 13
       },
       "geometry": {
+        "type": "Point",
         "coordinates": [
-          11.6580897,
-          45.2287628
-        ],
-        "type": "Point"
-      },
-      "id": 16
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Bagolaro",
-        "ID": 35
-      },
-      "geometry": {
-        "coordinates": [
-          11.6586805,
-          45.2299396
-        ],
-        "type": "Point"
+          11.65758027,
+          45.22913533
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
+        "ID": 42,
+        "Nome": "Tiglio",
+        "raggio": 13
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65751394,
+          45.2290941
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 43,
+        "Nome": "Tiglio",
+        "raggio": 13
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65744946,
+          45.2290587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 44,
+        "Nome": "Tiglio",
+        "raggio": 13
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65737075,
+          45.22902383
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 45,
+        "Nome": "Tiglio",
+        "raggio": 13
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65744946,
+          45.2290587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 46,
+        "Nome": "Tiglio",
+        "raggio": 13
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.65737075,
+          45.22902383
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 47,
+        "Nome": "Tiglio",
+        "raggio": 13
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.6587472,
+          45.2300664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 48,
         "Nome": "Tuia",
-        "ID": 36
+        "raggio": 8
       },
       "geometry": {
+        "type": "Point",
         "coordinates": [
-          11.6578879,
-          45.2295623
-        ],
-        "type": "Point"
+          11.657932302802871,
+          45.229576893359535
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "Nome": "Tamerice",
-        "ID": 37
+        "ID": 49,
+        "Nome": "Tuia",
+        "raggio":10
       },
       "geometry": {
+        "type": "Point",
         "coordinates": [
-          11.6581762,
-          45.2297278
-        ],
-        "type": "Point"
-      },
-      "id": 19
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Nespolo del Giappone",
-        "ID": 38
-      },
-      "geometry": {
-        "coordinates": [
-          11.6587955,
-          45.2299769
-        ],
-        "type": "Point"
+          11.65743804,
+          45.22961091
+        ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Cipresso dell'Arizona",
-        "ID": 39
-      },
-      "geometry": {
-        "coordinates": [
-          11.6576327,
-          45.2287186
-        ],
-        "type": "Point"
-      },
-      "id": 21
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Magnolia di Soulange",
-        "ID": 1
-      },
-      "geometry": {
-        "coordinates": [
-          11.658108724422215,
-          45.22920565072023
-        ],
-        "type": "Point"
-      },
-      "id": 22
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Olivo",
-        "ID": 6
-      },
-      "geometry": {
-        "coordinates": [
-          11.657397489916356,
-          45.23043674504213
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Tiglio",
-        "ID": 8
-      },
-      "geometry": {
-        "coordinates": [
-          11.657863252821677,
-          45.2292996848566
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Tiglio",
-        "ID": 9
-      },
-      "geometry": {
-        "coordinates": [
-          11.657663221368477,
-          45.22918951499002
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Tiglio",
-        "ID": 10
-      },
-      "geometry": {
-        "coordinates": [
-          11.65758026503132,
-          45.22913532505495
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Tiglio",
-        "ID": 11
-      },
-      "geometry": {
-        "coordinates": [
-          11.657513943199884,
-          45.22909409999798
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Tiglio",
-        "ID": 12
-      },
-      "geometry": {
-        "coordinates": [
-          11.657449461979628,
-          45.229058695087765
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Tiglio",
-        "ID": 13
-      },
-      "geometry": {
-        "coordinates": [
-          11.657370752822729,
-          45.22902383488417
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Glicine",
-        "ID": 19
-      },
-      "geometry": {
-        "coordinates": [
-          11.657527259389871,
-          45.228747379781794
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Ginkgo Biloba",
-        "ID": 23
-      },
-      "geometry": {
-        "coordinates": [
-          11.65699155008977,
-          45.23031013381063
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Abete Greco",
-        "ID": 24
-      },
-      "geometry": {
-        "coordinates": [
-          11.657354334271076,
-          45.23000281595873
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Carpino Bianco",
-        "ID": 25
-      },
-      "geometry": {
-        "coordinates": [
-          11.657794703052689,
-          45.22863802995994
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Pino",
-        "ID": 27
-      },
-      "geometry": {
-        "coordinates": [
-          11.658152093431834,
-          45.22959325002208
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Mirabolano var. Pissardii",
-        "ID": 29
-      },
-      "geometry": {
-        "coordinates": [
-          11.657633721830356,
-          45.229431569906374
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Mirabolano var. Pissardii",
-        "ID": 30
-      },
-      "geometry": {
-        "coordinates": [
-          11.657567165494111,
-          45.2294319948387
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Mirabolano var. Pissardii",
-        "ID": 32
-      },
-      "geometry": {
-        "coordinates": [
-          11.65769102488404,
-          45.22943204488445
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Ippocastano",
-        "ID": 33
-      },
-      "geometry": {
-        "coordinates": [
-          11.656897524783517,
-          45.23013424743522
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Cedro dell'Himalaya",
-        "ID": 40
-      },
-      "geometry": {
-        "coordinates": [
-          11.65780570185757,
-          45.22904205453088
-        ],
-        "type": "Point"
-      },
-      "id": 39
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Magnolia Sempreverde",
-        "ID": 41
-      },
-      "geometry": {
-        "coordinates": [
-          11.658085948557073,
-          45.22888107828905
-        ],
-        "type": "Point"
-      },
-      "id": 40
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Nome": "Magnolia Sempreverde",
-        "ID": 41
-      },
-      "geometry": {
-        "coordinates": [
-          11.6574062012443,
-          45.229396200657305
-        ],
-        "type": "Point"
-      },
-      "id": 41
     }
   ]
 }
