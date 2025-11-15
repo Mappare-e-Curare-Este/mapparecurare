@@ -21,7 +21,8 @@ html {
 body {
     margin: 0;
     background-image: linear-gradient(to bottom, var(--bg-start-color), var(--bg-end-color));
-    color: var(--text-color)
+    color: var(--text-color);
+    overflow-x: hidden;
 }
 
 /*
