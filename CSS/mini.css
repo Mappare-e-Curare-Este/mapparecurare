@@ -37,3 +37,14 @@ a#mapLink::after {
 div#projectDesc p#mapHint {
     margin-top: 5em;
 }
+
+/*
+    Regione Veneto
+*/
+
+@media (min-width: 586px) {
+    div#regVeneto p {
+        max-width: 60%;
+    }
+}
+
