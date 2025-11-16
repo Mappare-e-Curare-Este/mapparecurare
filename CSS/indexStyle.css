@@ -1,3 +1,7 @@
+/*
+    Common
+*/
+
 :root {
     --bg-start-color: #b6f8ab;
     --bg-end-color: #d7ffce;
@@ -6,10 +10,37 @@
     --title-color: #0b2d2c;
     --text-color: #25211d;
     --title2-bg-color: white;
-    --h1-border-color: #4ea345;
+    --border-color: #4ea345;
     --footer-bg-color: black;
     --footer-text-color: white;
+    --photo-animation-time: 0.2s
 }
+
+@keyframes slide {
+    from {
+        transform: translate(50%, -100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(50%, -50%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*
+    General
+*/
 
 html {
     padding: 0;
@@ -21,8 +52,7 @@ html {
 body {
     margin: 0;
     background-image: linear-gradient(to bottom, var(--bg-start-color), var(--bg-end-color));
-    color: var(--text-color);
-    overflow-x: hidden;
+    color: var(--text-color)
 }
 
 /*
@@ -66,7 +96,7 @@ h2 {
     align-items: center;
     justify-content: center;
     color: var(--title-color);
-    border-top: 0.2em solid var(--h1-border-color);
+    border-top: 0.2em solid var(--border-color);
     padding-top: 0.5em;
 }
 
@@ -111,6 +141,7 @@ a#mapLink::after {
     width: 150px;
     height: 130px;
     pointer-events: none;
+    animation: slide 0.7s ease-out;
 }
 
 /*
@@ -135,7 +166,7 @@ div#projectDesc p#mapHint {
     font-weight: bold;
     font-size: 2em;
     max-width: 80vw;
-    border-bottom: 0.2em solid var(--h1-border-color);
+    border-bottom: 0.2em solid var(--border-color);
     padding-bottom: 0.5em;
 }
 
@@ -156,6 +187,26 @@ div#projectImageDiv img {
   height: 350px;
   width: 250px;
   object-fit: cover;
+  opacity: 0;
+}
+
+div#projectImageDiv img:nth-child(1) {
+    animation: fadeIn var(--photo-animation-time) ease-in forwards;
+}
+
+div#projectImageDiv img:nth-child(2) {
+    animation: fadeIn var(--photo-animation-time) ease-in forwards;
+    animation-delay: calc(var(--photo-animation-time))
+}
+
+div#projectImageDiv img:nth-child(3) {
+    animation: fadeIn var(--photo-animation-time) ease-in forwards;
+    animation-delay: calc(var(--photo-animation-time)*2)
+}
+
+div#projectImageDiv img:nth-child(4) {
+    animation: fadeIn var(--photo-animation-time) ease-in forwards;
+    animation-delay: calc(var(--photo-animation-time)*3)
 }
 
 @media (min-width: 600px) {
@@ -228,6 +279,14 @@ div#partLogo img#alidarte {
     Regione Veneto
 */
 
+div#regVeneto::before {
+    display: block;
+    content: "";
+    background-color: var(--border-color);
+    width: 95vw;
+    height: 0.2em;
+}
+
 div#regVeneto {
     display: flex;
     flex-wrap: wrap;
@@ -235,6 +294,7 @@ div#regVeneto {
     align-items: center;
     justify-content: center;
     gap: 1em;
+    padding-top: 1em;
 }
 
 div#regVeneto img {
@@ -244,7 +304,7 @@ div#regVeneto img {
 
 div#regVeneto p {
     text-align: justify;
-    max-width: 80%;
+    max-width: 70%;
 }
 
 /*
@@ -263,4 +323,5 @@ footer {
 
 footer p {
     margin: 0.5em;
+    
 }
