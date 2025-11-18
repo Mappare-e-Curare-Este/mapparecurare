@@ -2,40 +2,17 @@
     Project Description
 */
 
-div#projectIntro {
+div#projectIntro h2 {
     flex-direction: column;
-    gap: 1em;
-    padding-top: 2em;
-}
-
-div#descDiv {
-    width: 80vw;
-}
-
-div#descDiv p {
-    text-align: justify;
-}
-
-a#mapLink {
-    max-width: 55vw;
-    padding: 2em 0.5em;
-    border-radius: 70px;
-}
-
-a#mapLink::after {
-    bottom: -56%;
-    right: 10%;
-    rotate: 164deg;
-    width: 150px;
-    height: 130px;
+    text-align: center;
 }
 
 /*
-    Project Description
+    Project photos
 */
 
-div#projectDesc p#mapHint {
-    margin-top: 5em;
+div#projectImageDiv img:nth-child(2) {
+    width: 85vw; 
 }
 
 /*
@@ -47,4 +24,3 @@ div#projectDesc p#mapHint {
         max-width: 60%;
     }
 }
-

@@ -13,8 +13,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
         <!--CSS-->
-        <link rel="stylesheet" href="./CSS/indexStyle.css">
-        <link rel="stylesheet" href="./CSS/mini.css" media="screen and (max-width: 900px)">
+        <link rel="stylesheet" href="./css/indexStyle.css">
+        <link rel="stylesheet" href="./css/mini.css" media="screen and (max-width: 900px)">
     </head>
     <body>
         <header>
@@ -22,44 +22,55 @@
         </header>
         <main>
             <div id="projectIntro">
-                <div id="descDiv">
-                    <h2>MAPPARE E CURARE</h2>
-                    <p>
-                        Un progetto dedicato all'impegno e alla partecipazione attiva dei giovani (14-35 anni) sui temi della sostenibilità ambientale, finalizzato a stimolare relazioni e connessioni tra i cittadini e i loro territori.
-                    </p>
-                </div>
-                <a id="mapLink" href="./map.html">
-                    CLICCA QUI PER APRIRE LA MAPPA INTERATTIVA
+                <h2>MAPPARE E CURARE</h2>
+                <p>
+                    Un progetto dedicato all'impegno e alla partecipazione attiva dei giovani (14-35 anni) sui temi della sostenibilità ambientale, finalizzato a stimolare relazioni e connessioni tra i cittadini e i loro territori.
+                </p>
+            </div>
+            <div id="mapLinkDiv">
+                <p id="mapHint" class="uppercase strong">
+                    apri la mappa e scopri <br> quanto conosci GLI ALBERI dei giardini di este!
+                </p>
+                <a class="specialLink" href="./map.html">
+                    CLICCA QUI
                 </a>
             </div>
-            <div id="projectDesc">
-                <p id="mapHint">
-                apri la mappa e scopri <br> quanto conosci GLI ALBERI dei giardini di este!
-                </p>
-                <p>
-                    A Este, a giugno 2025, un gruppo di giovani volontari, dopo aver fatto formazione con Legambiente, ha realizzato una mappa digitale interattiva contenente informazioni utili per riconoscere gli alberi dei Giardini del Castello Carrarese.
-                </p>
-                <p>
-                    Il gruppo ha realizzato schede descrittive delle specie arboree presenti e convogliato tutti i dati nella mappa che offre così, alla comunità, la possibilità di effettuare un’esplorazione consapevole della Natura ospitata all’interno del parco.
-                </p>
+            <div id="announcements">
+                <h4>📅 <time datetime="2025-11-22">sabato 22 novembre 2025</time> 📅</h4>
+                <p><time class="underline em" datetime="10:00">ore 10.00</time> <span class="em">presso Giardini del Castello di Este</span> <br> <strong class="uppercase">inaugurazione</strong> delle targhe leggio installate dal Comune di Este presso due ingressi dei Giardini.</p>
+                <p><time class="underline em" datetime="16:00">ore 16.00</time> <span class="em">presso Aula Magna ex Collegio Vescovile </span><br> <strong class="uppercase">PRESENTAZIONE DEL PROGETTO:</strong> il gruppo di giovani volontari presenterà alla comunità gli esiti del lavoro di mappatura svolto in questi mesi.</p>
+                <p class="em">Questo evento è ospitato all’interno del programma della micro-rassegna culturale “Come Essere Albero” di NATURA FUTURA e Associazione ALIdARTE APS. <br> Info qui: <a href="https://naturafutura.it/">naturafutura.it</a></p>
             </div>
-            <div id="projectImageDiv">
+             <div id="projectImageDiv">
                 <img alt="Immagine personale al lavoro durante il progetto" src="./images/photo1.jpg">
+                <img alt="Immagine personale al lavoro durante il progetto" src="./images/photo3.jpg">
                 <img alt="Immagine personale al lavoro durante il progetto" src="./images/photo2.jpg">
-                <img alt="Immagine personale al lavoro durante il progetto" src="./images/photo1.jpg">
-                <img alt="Immagine personale al lavoro durante il progetto" src="./images/photo2.jpg">
+            </div>
+            <div id="projectDesc">
+                <p>
+                    A Este, a <time datetime="2025-06">giugno 2025</time>, un gruppo di giovani <strong>volontari</strong>, dopo aver fatto formazione con Legambiente, ha realizzato una <strong>mappa digitale interattiva</strong> contenente informazioni utili per <strong>riconoscere gli alberi</strong> dei Giardini del Castello Carrarese.
+                </p>
+                <p>
+                    Il gruppo ha realizzato <strong>schede descrittive</strong> delle specie arboree presenti e convogliato tutti i dati nella mappa che offre così, alla comunità, la possibilità di effettuare un’<strong>esplorazione</strong> più consapevole della <strong>Natura</strong> ospitata all’interno del parco.
+                </p>
             </div>
             <div id="partDesc">
-                <h3>Partecipanti:</h3>
+                <h3>Partecipanti del progetto:</h3>
                     <ul>
                         <li>Gloria Borsoni,</li>
                         <li>Pierluigi Pascuzzi,</li>
                         <li>Giulio Lasalandra,</li>
                         <li>Alessio Capuzzo,</li>
                         <li>Luca Ambrosio,</li>
-                        <li>Matteo Schievano.</li>
+                        <li>Matteo Schievano,</li>
+                        <li>e Flores Baccini, presidente di Legambiente Este Circolo “Dai Colli all’Adige”</li>
                     </ul>
-                    <p>Insieme a Flores Baccini, presidente di Legambiente Este Circolo “Dai Colli all’Adige”</p>
+            </div>
+            <div id="joinUs">
+                <p id="joinUsDesc" class="uppercase">“mappare e curare” non si ferma qui! <br> unisciti al gruppo di volontari per partecipare alle prossime attività</p>
+                <a href="https://forms.gle/E2SNZ3mWa1Qo71bD7" class="specialLink uppercase">mi unisco al gruppo</a>
+                <p id="emailDesc" class="strong">Per segnalazioni:</p>
+                <a id="email" href="mailto:&#x6d;&#x61;&#x70;&#x70;&#x61;&#x72;&#x65;&#x63;&#x75;&#x72;&#x61;&#x72;&#x65;&#x2e;&#x65;&#x73;&#x74;&#x65;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x6d;&#x61;&#x70;&#x70;&#x61;&#x72;&#x65;&#x63;&#x75;&#x72;&#x61;&#x72;&#x65;&#x2e;&#x65;&#x73;&#x74;&#x65;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a>
             </div>
             <div id="partLogo">
                 <ul>
@@ -72,6 +83,9 @@
             <div id="regVeneto">
                 <img src="images/veneto.png" alt="Logo Regione del Veneto">
                 <p>Piani di intervento in materia di politiche giovanili "Parola ai giovani" Piano di intervento "Protagonisti oggi" presentato dal Comune di Monselice Dgr 281/2024 - Ddr 106/2024 Ente titolare del Progetto Comune di Este - "Mappare e Curare"</p>
+            </div>
+            <div id="specialThanks">
+                <p class="strong">Si ringraziano l’Assessore Silvia Bottaro, il dott. Sebastiano Mion, l’ing. Federico Del Piro, Centro Copie Euganeo.</p>
             </div>
         </main>
         <footer>

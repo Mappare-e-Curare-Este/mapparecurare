@@ -3,27 +3,28 @@
 */
 
 :root {
-    --bg-start-color: #b6f8ab;
-    --bg-end-color: #d7ffce;
-    --link-bg-color: #4ea345;
+    --bg-color: #e9ffe0;
+    --link-bg-color: #438e20;
     --link-color: white;
     --title-color: #0b2d2c;
     --text-color: #25211d;
+    --special-text-color: #0e350a;
     --title2-bg-color: white;
     --border-color: #4ea345;
     --footer-bg-color: black;
     --footer-text-color: white;
-    --photo-animation-time: 0.2s
+    --photo-animation-time: 0.2s;
+    --line-size: 5px;
 }
 
 @keyframes slide {
     from {
-        transform: translate(50%, -100%);
+        top: -60%;
         opacity: 0;
     }
 
     to {
-        transform: translate(50%, -50%);
+        top: -130%;
         opacity: 1;
     }
 }
@@ -36,6 +37,46 @@
     to {
         opacity: 1;
     }
+}
+
+.em {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+a {
+    color: var(--text-color)
+}
+
+a:visited {
+    color: var(--text-color)
+}
+
+a.specialLink {
+    position: relative;
+    display: block;
+    width: 45vw;
+    color: var(--link-color);
+    background-color: var(--link-bg-color);
+    padding: 2em 0.5em;
+    border-radius: 70px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+a.specialLink:visited {
+    color: var(--link-color);
 }
 
 /*
@@ -51,13 +92,13 @@ html {
 
 body {
     margin: 0;
-    background-image: linear-gradient(to bottom, var(--bg-start-color), var(--bg-end-color));
+    background-color: var(--bg-color);
     overflow-x: hidden;
     color: var(--text-color);
 }
 
 /*
-    Main Title
+    Upper Title
 */
 
 h1 {
@@ -79,70 +120,190 @@ h1 {
 
 div#projectIntro {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5em;
+    gap: 1em;
     padding-top: 3em;
 }
 
-div#descDiv {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1em;
-    width: 45vw;
-}
-
-h2 {
+div#projectIntro h2 {
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--title-color);
-    border-top: 0.2em solid var(--border-color);
+    border-top: var(--line-size) solid var(--border-color);
     padding-top: 0.5em;
+    font-size: 3.5em;
+    width: 85vw;
+    margin-bottom: -0.5em;
 }
 
 h2::before {
     display: inline;
     content: "";
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-image: url("../images/mappare_curare_logo.png");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
-div#descDiv p {
-    text-align: justify;
+div#projectIntro p {
+    text-align: center;
+    width: 85vw;
+    font-size: 1.5em;
+    padding-bottom: 1em;
+    border-bottom: var(--line-size) solid var(--border-color);
 }
 
-a#mapLink {
-    position: relative;
-    display: block;
-    max-width: 35vw;
-    color: var(--link-color);
-    background-color: var(--link-bg-color);
-    padding: 2em 0.5em;
-    border-radius: 70px;
-    font-size: 1.2em;
+/*
+    Map link area
+*/
+
+div#mapLinkDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-a#mapLink::after {
-    position: absolute;
+div#mapLinkDiv::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: var(--line-size);
+    background-color: var(--border-color);
+    margin: 0 auto;   
+}
+
+div#mapLinkDiv p {
+    font-size: 2em;
+    margin-top: 0;
+    max-width: 85vw;
+}
+
+div#mapLinkDiv p::before {
+    display: block;
+    content: "";
+    background-image: url("../images/tree.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 230px;
+}
+
+div#mapLinkDiv a {
+    margin-top: 110px;
+    margin-bottom: 2em;
+}
+
+div#mapLinkDiv a::before {
+   position: absolute;
     display: block;
     content: "";
     background-image: url("../images/arrow.svg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left top;
     background-size: contain;
-    bottom: -90%;
-    left: 50%;
-    transform: translate(50%, -50%);
-    rotate: 195deg;
-    width: 150px;
-    height: 130px;
-    pointer-events: none;
+    top: -130%;
+    width: 104px;
+    height: 106px;
+    rotate: -35deg;
     animation: slide 0.7s ease-out;
+}
+
+div#mapLinkDiv a::after {
+   position: absolute;
+    display: block;
+    content: "";
+    background-image: url("../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+    top: -130%;
+    right: 0;
+    width: 104px;
+    height: 106px;
+    rotate: 35deg;
+    animation: slide 0.7s ease-out;
+    animation-delay: 0.2s;
+}
+
+/*
+    Announcements
+*/
+
+div#announcements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+div#announcements h4 {
+    font-size: 2em;
+}
+
+div#announcements p {
+    font-size: 1.5em;
+    width: 85vw;
+}
+
+div#announcements::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: var(--line-size);
+    background-color: var(--border-color);
+    margin: 0 auto;   
+}
+
+/*
+    Project photos
+*/
+
+div#projectImageDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px; 
+}
+
+div#projectImageDiv img {
+    height: 408px;
+    width: 267px;
+    object-fit: cover;
+    opacity: 0;
+}
+
+div#projectImageDiv img:nth-child(1) {
+    animation: fadeIn var(--photo-animation-time) ease-in forwards;
+}
+
+div#projectImageDiv img:nth-child(2) {
+    width: 544px;
+    height: 408px;
+    animation: fadeIn var(--photo-animation-time) ease-in forwards;
+    animation-delay: calc(var(--photo-animation-time))
+}
+
+@media (max-width: 1100px) {
+  div#projectImageDiv img:nth-child(2) {
+    order: 3; 
+  }
+}
+
+div#projectImageDiv img:nth-child(3) {
+    
+    animation: fadeIn var(--photo-animation-time) ease-in forwards;
+    animation-delay: calc(var(--photo-animation-time)*2)
 }
 
 /*
@@ -154,77 +315,54 @@ div#projectDesc {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
 }
 
 div#projectDesc p {
     font-size: 1.3em;
-    max-width: 80%;
-}
-
-div#projectDesc p#mapHint {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 2em;
-    max-width: 80vw;
-    border-bottom: 0.2em solid var(--border-color);
-    padding-bottom: 0.5em;
+    max-width: 85vw
 }
 
 /*
-    Project photos
+    Join Us
 */
 
-div#projectImageDiv {
-  display: grid;
-  grid-template-columns: 250px;
-  justify-content: center;
-  gap: 1em;
-  max-width: 1200px;
-  margin: 0 auto;
+div#joinUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
 }
 
-div#projectImageDiv img {
-  height: 350px;
-  width: 250px;
-  object-fit: cover;
-  opacity: 0;
+div#joinUs p#joinUsDesc {
+    font-size: 2em;
+    color: var(--special-text-color);
+    text-align: center;
+    width: 85vw;
 }
 
-div#projectImageDiv img:nth-child(1) {
-    animation: fadeIn var(--photo-animation-time) ease-in forwards;
+div#joinUs p#emailDesc, div#joinUs a#email {
+    font-size: 1.5em;
+    text-align: center;
 }
 
-div#projectImageDiv img:nth-child(2) {
-    animation: fadeIn var(--photo-animation-time) ease-in forwards;
-    animation-delay: calc(var(--photo-animation-time))
-}
-
-div#projectImageDiv img:nth-child(3) {
-    animation: fadeIn var(--photo-animation-time) ease-in forwards;
-    animation-delay: calc(var(--photo-animation-time)*2)
-}
-
-div#projectImageDiv img:nth-child(4) {
-    animation: fadeIn var(--photo-animation-time) ease-in forwards;
-    animation-delay: calc(var(--photo-animation-time)*3)
-}
-
-@media (min-width: 600px) {
-  div#projectImageDiv {
-    grid-template-columns: repeat(2, 250px);
-  }
-}
-
-@media (min-width: 1200px) {
-  div#projectImageDiv {
-    grid-template-columns: repeat(4, 250px);
-  }
+div#joinUs::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: var(--line-size);
+    background-color: var(--border-color);
+    margin-top: 2em;
 }
 
 /*
     Credits
 */
+
+div#partDesc {
+    text-align: center;
+}
 
 div#partDesc h3 {
     text-align: center;
@@ -233,6 +371,8 @@ div#partDesc h3 {
 }
 
 div#partDesc ul {
+    max-width: 85vw;
+    display: inline-block;
     text-align: center;
     font-size: 1.2em;
     margin: 0;
@@ -243,13 +383,6 @@ div#partDesc li {
     display: inline;
     list-style: none;
     margin-right: 0.2em;
-}
-
-div#partDesc p {
-    text-align: center;
-    font-size: 1.2em;
-    margin-top: 0;
-    padding: 0;
 }
 
 /*
@@ -280,14 +413,6 @@ div#partLogo img#alidarte {
     Regione Veneto
 */
 
-div#regVeneto::before {
-    display: block;
-    content: "";
-    background-color: var(--border-color);
-    width: 95vw;
-    height: 0.2em;
-}
-
 div#regVeneto {
     display: flex;
     flex-wrap: wrap;
@@ -306,6 +431,14 @@ div#regVeneto img {
 div#regVeneto p {
     text-align: justify;
     max-width: 70%;
+}
+
+/*
+    Special thanks section
+*/
+
+div#specialThanks p {
+    text-align: center;
 }
 
 /*
