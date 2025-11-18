@@ -8,6 +8,16 @@ div#projectIntro h2 {
 }
 
 /*
+    Announcements
+*/
+
+@media(max-width: 474px) {
+    div#announcements h4 {
+        font-size: 1.7em
+    }
+}
+
+/*
     Project photos
 */
 
