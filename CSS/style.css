@@ -1,9 +1,18 @@
+:root {
+  --overlay-bg-color: rgba(200, 255, 200, 0.8);
+  --text-color: #222222;
+  --button-bg-color: rgba(0, 100, 0, 0.7);
+  --button-hover-color: #007800cc;
+  --popup-title-color: #004d00;
+}
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
 }
 
 #map {
@@ -21,7 +30,7 @@ html, body {
   top: 20px;
   right: 20px;
   z-index: 10000;
-  background-color: rgba(0, 100, 0, 0.7);
+  background-color: var(--button-bg-color);
   color: white;
   border: none;
   padding: 10px 15px;
@@ -32,7 +41,7 @@ html, body {
   transition: background-color 0.3s ease;
 }
 #menuButton:hover {
-  background-color: #007800cc;
+  background-color: var(--button-hover-color);
 }
 
 /* --- Stili per il pulsante Info --- */
@@ -41,7 +50,7 @@ html, body {
   top: 20px; 
   right: 80px;
   z-index: 10000;
-  background-color: rgba(0, 100, 0, 0.7);
+  background-color: var(--button-bg-color);
   color: white;
   border: none;
   padding: 12px 20px;
@@ -53,7 +62,7 @@ html, body {
   font-weight: 700;
 }
 #infoButton:hover {
-  background-color: #007800cc;
+  background-color: var(--button-hover-color);
 }
 
 /* --- Stili per il pulsante GPS --- */
@@ -62,7 +71,7 @@ html, body {
   bottom: 30px;
   left: 20px;
   z-index: 10000;
-  background-color: #007800cc;
+  background-color: var(--button-bg-color);
   color: white;
   border: none;
   padding: 10px 15px;
@@ -73,7 +82,7 @@ html, body {
   transition: background-color 0.3s ease;
 }
 #gpsButton:hover {
-  background-color: #014d01cc;
+  background-color: var(--button-hover-color);
 }
 
 #treeListMenu {
@@ -89,6 +98,10 @@ html, body {
   transition: transform 0.3s ease-out;
   overflow-y: auto;
   padding-top: 20px;
+}
+
+#treeListMenu.open {
+  transform: translateX(0);
 }
 
 #treeListMenu ul {
@@ -136,14 +149,15 @@ html, body {
   box-shadow: 0 4px 30px rgba(0, 20, 0, 0.3);
   position: relative;
   word-break: break-word;
+  color: var(--text-color);
 }
 
 #treeContent{
-  background: rgba(200, 255, 200, 0.8);
+  background: var(--overlay-bg-color);
 }
 
 #infoContent{
-  background: rgba(200 , 255, 200, 0.8);
+  background: var(--overlay-bg-color);
 }
 
 #treeContent .close-button,
@@ -154,7 +168,7 @@ html, body {
   background: none;
   border: none;
   font-size: 1.8rem;
-  color: #333;
+  color: var(--text-color);
   cursor: pointer;
   line-height: 1;
   padding: 5px;
@@ -234,7 +248,7 @@ html, body {
 .popup-title {
   margin: 0 0 10px 0;
   font-size: 1.1rem;
-  color: #004d00;
+  color: var(--popup-title-color);
 }
 
 .open-details-button {
