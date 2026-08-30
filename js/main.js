@@ -6,6 +6,7 @@
   // =========================================================================
   let map;
   let markers; // MarkerClusterGroup
+  let geojsonPois = null; // <--- AGGIUNGI QUESTA RIGA QUI IN CIMA
   
   // Variabili GPS
   let gpsMarker = null;
@@ -13,7 +14,10 @@
   
   // Variabili Interfaccia
   let highlightedLayers = [];
-  const HIGHLIGHT_COLOR = '#ffcc00'; // Colore Giallo/Arancio per evidenziare
+  let HIGHLIGHT_COLOR = '#ffcc00'; // Colore Giallo/Arancio per evidenziare (sovrascrivibile da Google Sheets)
+  let POI_COLOR = '#238210'; // Colore di default dei POI (sovrascrivibile da Google Sheets)
+  let PARK_FILL_COLOR = '#3c9629'; // Colore di riempimento del confine del parco
+  let PARK_BORDER_COLOR = '#255c19'; // Colore del bordo del confine del parco
   const PARK_BOUNDS = L.latLngBounds([[45.228, 11.654], [45.232, 11.660]]);
   const LOCATION_OPTIONS = {
       enableHighAccuracy: true,
@@ -31,10 +35,10 @@
   // =========================================================================
 
   function unhighlightLayers() {
-    // Colore originale del cerchio: "#238210" (Verde Scuro)
+    // Colore originale del cerchio (configurabile da Google Sheets, chiave "ColorePOI")
     highlightedLayers.forEach(layer => {
       layer.setStyle({
-          fillColor: "#238210",
+          fillColor: POI_COLOR,
           color: "", // Rimuove il bordo (o imposta il colore originale)
           weight: 1,
           opacity: 1,
@@ -103,23 +107,33 @@
     unhighlightLayers();
   }
 
-  function openInfoOverlay() {
-    // Chiude qualsiasi altra interfaccia aperta
-    closeMenu();
-    document.getElementById('treeOverlay').classList.remove('visible');
-    if (map) map.closePopup();
-    unhighlightLayers(); 
-    
-    // 🌳 CORREZIONE: Usa replaceState se c'è un hash, altrimenti pushState
-    if (location.hash.length === 0 || location.hash === '#exit') {
-        window.history.pushState(null, '', location.pathname + '#info');
-    } else {
-        window.history.replaceState(null, '', location.pathname + '#info');
-    }
-    
-    document.getElementById('infoOverlay').classList.add('visible');
-    document.getElementById('infoContent').scrollTop = 0;
+function openInfoOverlay() {
+  closeMenu();
+  document.getElementById('treeOverlay').classList.remove('visible');
+  if (map) map.closePopup();
+  unhighlightLayers(); 
+
+  // Aggiorna dinamicamente l'overlay Info se la configurazione è disponibile
+  if (window.infoPanelConfig) {
+    const infoContent = document.getElementById('infoContent');
+    infoContent.innerHTML = `
+      <button class="close-button">&times;</button>
+      <h2>${window.infoPanelConfig.TitoloInfo || 'Progetto Mappare e Curare'}</h2>
+      <p>${window.infoPanelConfig.DescrizioneInfo || ''}</p>
+    `;
+    // Re-collega il pulsante chiudi
+    infoContent.querySelector('.close-button').addEventListener('click', closeInfoOverlay);
   }
+  
+  if (location.hash.length === 0 || location.hash === '#exit') {
+      window.history.pushState(null, '', location.pathname + '#info');
+  } else {
+      window.history.replaceState(null, '', location.pathname + '#info');
+  }
+  
+  document.getElementById('infoOverlay').classList.add('visible');
+  document.getElementById('infoContent').scrollTop = 0;
+}
 
   // Funzione per chiudere l'overlay Info
   function closeInfoOverlay() {
@@ -129,7 +143,7 @@
   // Funzione per chiudere il menu
   function closeMenu() {
       const treeListMenu = document.getElementById('treeListMenu');
-      treeListMenu.style.transform = 'translateX(100%)';
+      treeListMenu.classList.remove('open');
   }
 
   // Funzione per aprire il menu
@@ -140,7 +154,7 @@
     unhighlightLayers();
 
     const treeListMenu = document.getElementById('treeListMenu');
-    treeListMenu.style.transform = 'translateX(0)';
+    treeListMenu.classList.add('open');
     
     // 🌳 MODIFICA: Quando il menu è aperto, aggiungi uno stato alla cronologia del browser.
     if (!location.hash.includes('#menu-open')) {
@@ -271,10 +285,10 @@ function addEntranceMarkers(map) {
 
       L.geoJSON(parkFeature, {
         style: {
-          fillColor: '#3c9629',
+          fillColor: PARK_FILL_COLOR,
           weight: 2,
           opacity: 0,
-          color: '#255c19',
+          color: PARK_BORDER_COLOR,
           dashArray: '3',
           fillOpacity: 0.0
         }
@@ -342,7 +356,7 @@ function addEntranceMarkers(map) {
       const popupContent = `
         <div class="tree-popup">
           <h3 class="popup-title">${treeName}</h3>
-          <button class="open-details-button" data-feature-id="${feature.properties.ID}">
+          <button class="open-details-button" data-feature-id="${feature.properties.ID}" data-name="${treeName}">
             Vedi Scheda Completa 🌳
           </button>
         </div>
@@ -350,7 +364,7 @@ function addEntranceMarkers(map) {
 
       const treeCircle = L.circleMarker(latlng, {
         radius: radiusAtZoom18,
-        fillColor: "#238210",
+        fillColor: POI_COLOR,
         color: "",
         weight: 1,
         opacity: 1,
@@ -451,7 +465,8 @@ function handleSpeciesSelection(speciesName, featuresOfSpecies) {
       }
 
       // 2. Crea Cerchio di accuratezza
-      accuracyCircle = L.circle(latlng, radius, {
+      accuracyCircle = L.circle(latlng, {
+          radius: radius,
           color: '#1a73e8', // Blu
           fillColor: '#1a73e8',
           fillOpacity: 0.15,
@@ -570,34 +585,48 @@ function handleSpeciesSelection(speciesName, featuresOfSpecies) {
           gpsButton.addEventListener('click', getOneTimeLocation);
       }
       
-      // 🌳 CORREZIONE CRITICA 3: Gestore click globale per il pulsante nel popup (Event Delegation)
+      // 🌳 CORREZIONE: Gestore click tollerante (cerca per ID oppure per Nome)
       document.addEventListener('click', function(e) {
-        if (e.target && e.target.matches('.open-details-button')) {
+        // Cerca il pulsante anche se si clicca sul testo o sull'icona al suo interno
+        const btn = e.target.closest('.open-details-button');
+        
+        if (btn) {
             e.preventDefault(); 
             
-            // 1. Recupera l'ID e cerca la feature
-            const featureId = parseInt(e.target.dataset.featureId);
-            const feature = featureLookup.get(featureId);
+            // Legge i dati dal pulsante trovato
+            const rawId = btn.dataset.featureId || btn.dataset.id;
+            const rawName = btn.dataset.name || btn.dataset.featureName;
+            
+            let feature = null;
+            const parsedId = parseInt(rawId, 10);
+
+            if (!isNaN(parsedId)) {
+                feature = featureLookup.get(parsedId);
+            }
+
+            if (!feature && rawName && geojsonPois) {
+                feature = geojsonPois.features.find(f => 
+                    f.properties.Nome && f.properties.Nome.trim().toLowerCase() === rawName.trim().toLowerCase()
+                );
+            }
             
             if (feature) {
-                // 2. Chiude il popup e pulisce lo stato
-                map.closePopup();
+                if (map) map.closePopup();
                 if (location.hash.includes('#popup')) {
                     window.history.replaceState(null, '', location.pathname);
                 }
                 
-                // 3. Apre l'overlay della scheda
                 unhighlightLayers(); 
                 openTreeOverlay(feature); 
             } else {
-                console.error('Feature non trovata con ID:', featureId);
+                console.error('Feature non trovata con ID/Nome:', rawId, rawName);
             }
         }
       });
 
       // Listener Menu
       menuButton.addEventListener('click', () => {
-          if (treeListMenu.style.transform === 'translateX(0px)') {
+          if (treeListMenu.classList.contains('open')) {
               closeMenu();
               // 🌳 MODIFICA: Rimuovi l'hash manualmente, non usare back() per non uscire
               if (location.hash.includes('#menu-open')) {
@@ -648,7 +677,7 @@ function handleSpeciesSelection(speciesName, featuresOfSpecies) {
       
       // Listener per chiudere il menu cliccando sulla mappa
       map.on('click', () => {
-          if (treeListMenu.style.transform === 'translateX(0px)') {
+          if (treeListMenu.classList.contains('open')) {
               closeMenu();
               // 🌳 MODIFICA: Rimuovi l'hash manualmente, non usare back() per non uscire
               if (location.hash.includes('#menu-open')) {
@@ -658,23 +687,97 @@ function handleSpeciesSelection(speciesName, featuresOfSpecies) {
       });
   }
 
+// --- Funzione di caricamento principale ---
+  const GOOGLE_SHEETS_API_URL = 'https://script.google.com/macros/s/AKfycbyE3x580LAoEijjIb9RXNGiLEBfFDlh4nOJUBE18GLU2RL8ZDeRjA1ugarLsPPWhVs/exec';
 
-  // --- Funzione di caricamento principale ---
   window.onload = function() {
-    fetch('data/pois.json')
-      .then(response => response.json())
-      .then(geojsonPois => {
+    fetch(GOOGLE_SHEETS_API_URL)
+      .then(res => res.json())
+      .then(sheetData => {
+
+        const cfg = sheetData.config || {};
+
+        // --- Colori configurabili dal foglio Google "Config" ---
+        // Chiave nel foglio -> cosa controlla
+        if (cfg.ColoreFinestre) {
+          document.documentElement.style.setProperty('--overlay-bg-color', cfg.ColoreFinestre);
+        }
+        if (cfg.ColoreTesto) {
+          document.documentElement.style.setProperty('--text-color', cfg.ColoreTesto);
+        }
+        if (cfg.ColoreBottoni) {
+          document.documentElement.style.setProperty('--button-bg-color', cfg.ColoreBottoni);
+        }
+        if (cfg.ColoreTitoloPopup) {
+          document.documentElement.style.setProperty('--popup-title-color', cfg.ColoreTitoloPopup);
+        }
+        if (cfg.ColorePOI) {
+          POI_COLOR = cfg.ColorePOI;
+        }
+        if (cfg.ColoreEvidenziazione) {
+          HIGHLIGHT_COLOR = cfg.ColoreEvidenziazione;
+        }
+        if (cfg.ColoreParco) {
+          PARK_FILL_COLOR = cfg.ColoreParco;
+        }
+        if (cfg.ColoreBordoParco) {
+          PARK_BORDER_COLOR = cfg.ColoreBordoParco;
+        }
+
+        window.infoPanelConfig = cfg;
+
+        geojsonPois = {
+          "type": "FeatureCollection",
+          "speciesCatalog": sheetData.speciesCatalog || [],
+          "features": (sheetData.poiList || [])
+            .filter(poi => !isNaN(poi.lat) && !isNaN(poi.lng) && poi.lat !== 0 && poi.lng !== 0)
+            .map(poi => ({
+              "type": "Feature",
+              "properties": {
+                "ID": Number(poi.id),
+                "Nome": poi.name,
+                "raggio": Number(poi.radius)
+              },
+              "geometry": {
+                "type": "Point",
+                "coordinates": [poi.lng, poi.lat]
+              }
+            }))
+        };
+
         initMap(geojsonPois);
+
+        // Apre automaticamente la scheda "Info" al primo caricamento della mappa,
+        // ma solo se non si tratta di una navigazione con stato già presente (es. link diretto a un popup).
+        // Configurabile dal foglio Google: valorizzare "ApriInfoAllAvvio" a "no" per disattivare.
+        const autoOpenInfo = !cfg.ApriInfoAllAvvio || cfg.ApriInfoAllAvvio.toString().toLowerCase() !== 'no';
+        if (autoOpenInfo && location.hash.length === 0) {
+          openInfoOverlay();
+        }
       })
-      .catch(err => console.error("Errore nel caricamento di pois.json:", err));
+      .catch(err => {
+        console.error("Errore nel caricamento da Sheets:", err);
+        showLoadError();
+      });
   };
+
+  // Mostra un messaggio visibile all'utente se il caricamento dei dati fallisce
+  function showLoadError() {
+    const banner = document.createElement('div');
+    banner.id = 'loadErrorBanner';
+    banner.style.cssText = 'position:fixed;top:0;left:0;width:100%;padding:14px;' +
+      'background:#c62828;color:#fff;text-align:center;z-index:20000;' +
+      'font-family:sans-serif;box-shadow:0 2px 8px rgba(0,0,0,0.3);';
+    banner.textContent = 'Impossibile caricare i dati della mappa. Controlla la connessione e ricarica la pagina.';
+    document.body.appendChild(banner);
+  }
 
 // --- Gestione della Cronologia (Tasto 'Indietro') CORRETTA e COMPLETA ---
 window.onpopstate = () => {
     // Variabili di stato aggiornate
     const isTreeOverlayVisible = document.getElementById('treeOverlay').classList.contains('visible');
     const isInfoOverlayVisible = document.getElementById('infoOverlay').classList.contains('visible');
-    const isMenuOpen = document.getElementById('treeListMenu').style.transform === 'translateX(0px)';
+    const isMenuOpen = document.getElementById('treeListMenu').classList.contains('open');
     const exitPrompt = document.getElementById('exitPrompt');
     const isExitPromptVisible = exitPrompt.classList.contains('visible');
     const isPopupOpen = map && map.getContainer().querySelector('.leaflet-popup-pane .leaflet-popup');
